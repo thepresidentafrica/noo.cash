@@ -1,0 +1,13 @@
+{
+  "name": "noo.cash",
+  "version": "0.0.100",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "app": "pnpm --filter application",
+    "api": "pnpm --filter backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
