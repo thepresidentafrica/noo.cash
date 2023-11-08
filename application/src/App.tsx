@@ -9,7 +9,7 @@ export const Noocash = () => {
     <>
       <ApolloProvider client={nooCashClient}>
         <div>
-          {/* Other content of your component */}
+          {/* Structured data */}
           <StructuredData />
           {/* Set the meta tags for SEO and social sharing */}
           <Helmet>
@@ -34,7 +34,6 @@ export const Noocash = () => {
             <meta name="robots" content="index, follow" />
             <link rel="canonical" href="https://www.noo.cash" />
 
-            {/* Add other meta tags as needed for your specific requirements */}
           </Helmet>
         </div>
         <RouterProvider router={appRoutes[env.VITE_APP_MODE]} />
