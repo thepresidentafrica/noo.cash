@@ -1,7 +1,7 @@
 {
   "build": {
     "beforeDevCommand": "pnpm dev",
-    "beforeBuildCommand": "pnpm build",
+    "beforeBuildCommand": "VITE_APP_MODE=mobile pnpm build",
     "devPath": "http://localhost:1420",
     "distDir": "../dist"
   },

@@ -1,3 +1,3 @@
-package co.za.opher.opher
+package cash.noo.opher
 
 class MainActivity : TauriActivity()
