@@ -1,0 +1,43 @@
+name: noo.cash Build Checks
+on:
+    push:
+      paths:
+            "application/**"
+    workflow_dispatch:
+jobs:
+    build-noocash:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: application
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: setup node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.x
+            - name: setup pnpm 
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - name: install dependencies
+              run: pnpm install --no-frozen-lockfile
+            - name: build project 
+              run: |
+                pnpm build
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v4
+              with:
+               commit-message: ${{ github.event.head_commit.message }}
+               title: new PR from ${{ github.actor }}, ${{ github.event.head_commit.message }}
+               body: ${{ github.event.head_commit.message }}
+               base: main
+               token: ${{ secrets.GIT_TOKEN }}
+               labels: automated-pr, OpherLabs, Dev
+               committer: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+               author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+              #  reviewers: mitch1009
+               assignees: ${{github.actor}}
+               delete-branch: true
+              
