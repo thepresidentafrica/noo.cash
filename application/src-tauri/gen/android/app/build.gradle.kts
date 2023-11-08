@@ -6,10 +6,10 @@ plugins {
 
 android {
     compileSdk = 33
-    namespace = "cash.noo.app"
+    namespace = "cash.noo.noo_cash"
     defaultConfig {
         manifestPlaceholders["usesCleartextTraffic"] = "false"
-        applicationId = "cash.noo.app"
+        applicationId = "cash.noo.noo_cash"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

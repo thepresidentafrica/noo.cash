@@ -1,4 +1,4 @@
-/src/main/java/cash/noo/opher/generated
+/src/main/java/cash/noo/noo_cash/generated
 /src/main/jniLibs/**/*.so
 /src/main/assets/tauri.conf.json
 /tauri.build.gradle.kts

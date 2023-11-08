@@ -1,16 +1,16 @@
 [package]
-name = "opher"
+name = "noo-cash"
 version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Noo Cash Application"
+authors = ["Mitch Chimwemwe Chanza <hello@mitch.guru>"]
 license = ""
-repository = ""
+repository = "https://github.com/thepresidentafrica/noo.cash"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
-name = "opher_lib"
+name = "noocash_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
