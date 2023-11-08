@@ -1,0 +1,48 @@
+name: noo.cash Prod Environment
+on:
+  push:
+    tags:
+      - "ui-*.*.*"
+    paths:
+        "application/**"
+  workflow_dispatch:
+jobs:
+  build-prod:
+    defaults:
+      run:
+        working-directory: application
+    name: build-prodution
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GIT_TOKEN }}
+
+    - name: Build and Push Docker Image
+      run: |
+        docker build -t ghcr.io/${{ github.repository_owner }}/noocash:ui-dev .
+        docker push ghcr.io/${{ github.repository_owner }}/noocash:ui-dev
+     
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-prod
+    name: deploy-production
+    steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Login to azure
+            uses: azure/login@v1
+            with:
+              creds: ${{ secrets.PRESIDENT_PROD_AZURE_CREDENTIALS }}
+          - name: Deploy to Azure Web App
+            uses: azure/webapps-deploy@v2
+            with:
+              app-name: ${{secrets.PRESIDENT_PROD_APP_NAME}}
+              images: 'ghcr.io/${{ github.repository_owner }}/noocash:ui-dev'
+      

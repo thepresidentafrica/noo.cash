@@ -29,5 +29,6 @@ dist-ssr
 build
 dist
 .env
+noocash.env
 .env.local
 .env.prod
