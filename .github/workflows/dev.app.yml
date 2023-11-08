@@ -5,6 +5,8 @@ on:
     paths:
         "application/**"
   workflow_dispatch:
+env:
+    VITE_APP_MODE: website
 jobs:
   build-noocash-dev:
     defaults:

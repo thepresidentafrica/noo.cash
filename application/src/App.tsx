@@ -36,7 +36,7 @@ export const Noocash = () => {
 
           </Helmet>
         </div>
-        <RouterProvider router={appRoutes[env.VITE_APP_MODE]} />
+        <RouterProvider router={appRoutes[env.VITE_APP_MODE||"website"]} />
       </ApolloProvider>
     </>
   )
