@@ -1,6 +1,6 @@
 #!/bin/bash
 
 az ad sp create-for-rbac \
-  --name $1 --role contributor \
-  --scopes /subscriptions/$2/resourceGroups/$3 \
+  --name noocash-web --role contributor \
+  --scopes /subscriptions/74b12dcc-bd39-498b-91c0-6ad108eed2d1/resourceGroups/noocash-web_group \
   --sdk-auth
