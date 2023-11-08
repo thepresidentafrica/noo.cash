@@ -9,7 +9,7 @@ jobs:
   build-opher-dev:
     defaults:
       run:
-        working-directory: frontend
+        working-directory: application
     if: github.event.pull_request.merged==true
     name: build-opherlabs-dev
     runs-on: ubuntu-latest
