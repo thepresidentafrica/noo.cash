@@ -1,0 +1,8 @@
+version: '3'
+name: "noocash-dev"
+services:
+  app:
+    image: ghcr.io/thepresidentafrica/noocash:ui-dev
+    ports:
+      - 80:80
+    restart: always

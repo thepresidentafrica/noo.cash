@@ -26,8 +26,8 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t ghcr.io/${{ github.repository_owner }}/noocash:ui-dev .
-        docker push ghcr.io/${{ github.repository_owner }}/noocash:ui-dev
+        docker build -t ghcr.io/${{ github.repository_owner }}/noocash:ui .
+        docker push ghcr.io/${{ github.repository_owner }}/noocash:ui
      
   deploy:
     runs-on: ubuntu-latest
