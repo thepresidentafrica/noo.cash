@@ -6,7 +6,7 @@ on:
         "application/**"
   workflow_dispatch:
 jobs:
-  build-opher-dev:
+  build-noocash-dev:
     defaults:
       run:
         working-directory: application
@@ -31,8 +31,8 @@ jobs:
      
   deploy:
     runs-on: ubuntu-latest
-    needs: build-opher-dev
-    name: deploy-opher-dev
+    needs: build-noocash-dev
+    name: deploy-noocash-dev
     steps:
           - name: Checkout code
             uses: actions/checkout@v2
