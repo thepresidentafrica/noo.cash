@@ -59,9 +59,9 @@
     "description": "Your trusted online payment platform for secure and hassle-free digital transactions.",
     "screenshots": [
         {
-            "src": "/img/social.jpg",
-            "type": "image/jpg",
-            "sizes": "720x540",
+            "src": "/social/noocash-social.png",
+            "type": "image/png",
+            "sizes": "1212x686",
             "form_factor": "wide"
         }
     ]
