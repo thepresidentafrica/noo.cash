@@ -13,7 +13,7 @@ jobs:
       run:
         working-directory: application
     if: github.event.pull_request.merged==true
-    name: build-opherlabs-dev
+    name: build-noocash-dev
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
