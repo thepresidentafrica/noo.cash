@@ -3,7 +3,7 @@
     "name": "Noo.Cash - Your Cashless Payment Platform",
     "icons": [
         {
-            "src": "/img/logo.svg",
+            "src": "/logo.svg",
             "type": "image/svg+xml",
             "sizes": "512x512"
         },
