@@ -1,0 +1,37 @@
+name: API Staging server
+on:
+    pull_request:
+        types: [closed]
+        paths:
+            - "backend/**"
+    workflow_dispatch:
+env:
+    POSTGRES_REMOTE_SERVER: ${{secrets.POSTGRES_REMOTE_SERVER}}
+    POSTGRES_REMOTE_DEV_DB: ${{secrets.POSTGRES_REMOTE_DEV_DB}}
+    POSTGRES_REMOTE_DEV_PORT: ${{secrets.POSTGRES_REMOTE_DEV_PORT}}
+    POSTGRES_REMOTE_DEV_USER: ${{secrets.POSTGRES_REMOTE_DEV_USER}}
+    POSTGRES_REMOTE_DEV_PASSWORD: ${{secrets.POSTGRES_REMOTE_DEV_PASSWORD}}
+    REMOTE_DATABASE_URL: ${{secrets.REMOTE_DATABASE_URL}}
+jobs:
+    build-api:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: backend
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: setup node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.x
+            - name: setup pnpm 
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - name: install dependencies
+              run: pnpm install --no-frozen-lockfile
+            - name: build project 
+              run: |
+                pnpm build
+                pnpm mg:prod

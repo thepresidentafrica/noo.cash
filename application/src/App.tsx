@@ -14,7 +14,7 @@ export const Noocash = () => {
           {/* Set the meta tags for SEO and social sharing */}
           <Helmet>
             {/* Standard meta tags for SEO */}
-            <title className="capitalize">Noo.Cash | {env.VITE_APP_MODE}</title>
+            <title className="capitalize">Noo.Cash | Your trusted online payment platform for secure and hassle-free digital transactions</title>
             <meta name="description" content="Your trusted online payment platform for secure and hassle-free digital transactions. Join the cashless revolution with Noo.Cash." />
             <meta name="keywords" content="Noo.Cash, online payments, secure transactions, digital payments, cashless payments" />
 

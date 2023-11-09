@@ -5,7 +5,7 @@ export const StructuredData = () => {
     "@context": "http://schema.org",
     "@type": "WebSite",
     "url": "https://www.noo.cash",
-    "name": "Noo.Cash",
+    "name": "noo.cash",
     "description": "Your trusted online payment platform for secure and hassle-free digital transactions. Join the cashless revolution with Noo.Cash.",
     "potentialAction": {
       "@type": "SearchAction",

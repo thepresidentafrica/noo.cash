@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "0.0.10",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mg:prod": "pnpm prisma migrate deploy --schema prisma/dev.prisma ",
+    "mg:dev": "pnpm prisma migrate dev --schema prisma/dev.prisma ",
+    "p:dev": "pnpm prisma db pull --schema prisma/dev.prisma "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "5.4.2"
+  },
+  "dependencies": {
+    "@prisma/client": "5.4.2"
+  }
+}
