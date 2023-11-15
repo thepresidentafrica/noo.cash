@@ -11,12 +11,12 @@ jobs:
               with:
                   AUTO_ASSIGN: true
                   IGNORE: 'backend, scripts,node_modules,.github, application, noo.device,web3'
-                  IDENTIFIERS:  |
-                    '[
-                        {"name": "Issue", "labels": ["enhencements"]},
-                        {"name": "Config", "labels": ["Infrastructure"]},
-                        {"name": "Fix", "labels": ["fixture"]},
-                        {"name": "Bug", "labels": ["bug"]},
-                        {"name": "TODO", "labels": ["TODO"]}
-                    ]
-                        '
+                #   IDENTIFIERS:  |
+                #     '[
+                #         {"name": "Issue", "labels": ["enhencements"]},
+                #         {"name": "Config", "labels": ["Infrastructure"]},
+                #         {"name": "Fix", "labels": ["fixture"]},
+                #         {"name": "Bug", "labels": ["bug"]},
+                #         {"name": "TODO", "labels": ["TODO"]}
+                #     ]
+                #         '
