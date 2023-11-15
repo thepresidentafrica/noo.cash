@@ -1,0 +1,21 @@
+name: "CHECK ISSUES"
+on: ["push"]
+jobs:
+    build:
+        runs-on: "ubuntu-latest"
+        steps:
+            - uses: "actions/checkout@v3"
+            - name: "TODO to Issue"
+              uses: "alstr/todo-to-issue-action@v4"
+
+              with:
+                  AUTO_ASSIGN: true
+                  IGNORE: 'backend, application, noo.device,web3'
+                  IDENTIFIERS:  |
+                    '[
+                        {"key": "Issue", "labels": "enhencements"}]
+                        {"key": "Config", "labels": "Infrastructure"}]
+                        {"key": "Fix", "labels": "fixture"}]
+                        {"key": "Bug", "labels": "bug"}]
+                        
+                        '
