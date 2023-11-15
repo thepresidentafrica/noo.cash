@@ -21,7 +21,7 @@
 
 // 1. Implement QR code scanning functionality.
 function scanQRCode(): void {
-  // Code to scan QR code goes here
+  // Code to scan QR code goes here - to be implemented
 }
 
 // 2. Develop a secure PIN entry system for payments.
