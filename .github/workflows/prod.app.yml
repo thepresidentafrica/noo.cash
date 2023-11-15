@@ -6,6 +6,9 @@ on:
     paths:
         "application/**"
   workflow_dispatch:
+env:
+    VITE_APP_MODE: website
+    VITE_APP_TITLE: noo.cash
 jobs:
   build-prod:
     defaults:

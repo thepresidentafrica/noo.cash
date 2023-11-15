@@ -1,7 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { Logo } from '..'
 import { WEB_NAVIGATION_DATA } from './NavigationData'
-import { BottomNavigation } from './BottomNavigation/BottomNavigation';
 
 export const WebsiteNavigation = () => {
   return (
@@ -80,11 +79,6 @@ export const WebsiteNavigation = () => {
             </div>
           </nav>
         </div>
-        <main className="mx-auto mt-16 max-w-7xl px-4 min-h-screen sm:mt-24">
-          <Outlet />
-        </main>
-        <BottomNavigation />
-        {/* TODO: Add prpper footer  additions*/}
       </div>
     </div>
   )

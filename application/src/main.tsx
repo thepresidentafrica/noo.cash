@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import  { Noocash } from "./App";
-import "./styles.css";
+import "./styles.scss";
 import { DEBUG } from "./utils";
 
 if ('serviceWorker' in navigator) {
