@@ -13,10 +13,10 @@ jobs:
                   IGNORE: 'backend, scripts,node_modules,.github, application, noo.device,web3'
                   IDENTIFIERS:  |
                     '[
-                        {"key": "Issue", "labels": "enhencements"}]
-                        {"key": "Config", "labels": "Infrastructure"}]
-                        {"key": "Fix", "labels": "fixture"}]
-                        {"key": "Bug", "labels": "bug"}]
-                        {"key": "TODO", "labels": "TODO"}]
+                        {"key": "Issue", "label": []"enhencements"]}]
+                        {"key": "Config", "labels": []"Infrastructure"]}]
+                        {"key": "Fix", "labels": []"fixture"]}]
+                        {"key": "Bug", "labels": []"bug"]}]
+                        {"key": "TODO", "labels": []"TODO"]}]
                         
                         '
