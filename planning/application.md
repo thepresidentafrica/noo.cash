@@ -2,14 +2,14 @@
 
 **Description:** Implement key features for the core functionality of the Noo.Cash application, focusing on payment methods, shop onboarding, and additional user account features.
 
-## Issue 1: Enable Payments with QR Code Scans or PIN
+<!-- TODO 1: Enable Payments with QR Code Scans or PIN
 
 **Description:** Allow users to make payments in any merchant shop or online using QR code scans or PIN entry.
 
 **Subtasks:**
 1. Implement QR code scanning functionality.
 2. Develop a secure PIN entry system for payments.
-3. Integrate payment processing logic.
+3. Integrate payment processing logic. -->
 
 ## Issue 2: Priority Feature - Enable Airtime Payments
 
