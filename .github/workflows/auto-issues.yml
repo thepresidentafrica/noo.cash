@@ -1,21 +1,11 @@
-name: "CREATE ISSUES"
+name: "Run TODO to Issue"
 on: ["push"]
 jobs:
     build:
         runs-on: "ubuntu-latest"
         steps:
             - uses: "actions/checkout@v3"
-            - name: "Create Issues"
+            - name: "TODO to Issue"
               uses: "alstr/todo-to-issue-action@v4"
               with:
                   AUTO_ASSIGN: true
-                #   IGNORE: 'backend, scripts,node_modules,.github, application, noo.device,web3'
-                #   IDENTIFIERS:  |
-                #     '[
-                #         {"name": "Issue", "labels": ["enhencements"]},
-                #         {"name": "Config", "labels": ["Infrastructure"]},
-                #         {"name": "Fix", "labels": ["fixture"]},
-                #         {"name": "Bug", "labels": ["bug"]},
-                #         {"name": "TODO", "labels": ["TODO"]}
-                #     ]
-                #         '

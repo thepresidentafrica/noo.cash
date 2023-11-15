@@ -84,7 +84,7 @@ export const WebsiteNavigation = () => {
           <Outlet />
         </main>
         <BottomNavigation />
-        {/* TODO: Add prpper footer */}
+        {/* TODO: Add prpper footer  additions*/}
       </div>
     </div>
   )
