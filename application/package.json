@@ -5,7 +5,7 @@
   "description": "noo.cash application",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host --open",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "tauri": "tauri"
