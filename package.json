@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "app": "pnpm --filter application",
-    "api": "pnpm --filter backend"
+    "api": "pnpm --filter backend",
+    "device": "pnpm --filter noo.device"
   },
   "keywords": [],
   "author": "",

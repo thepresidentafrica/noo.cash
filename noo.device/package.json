@@ -1,0 +1,21 @@
+{
+    "name": "noo.device",
+    "version": "0.0.100",
+    "private": "true",
+    "description": "noo.cash device package development", 
+    "dependencies": {},
+    "devDependencies": {
+        "@devicescript/cli": "latest"
+    },
+    "scripts": {
+        "setup": "devicescript build --quiet",
+        "build:devicescript": "devicescript build src/main.ts",
+        "postinstall": "pnpm run setup",
+        "build": "pnpm run build:devicescript",
+        "watch:devicescript": "devicescript devtools src/main.ts",
+        "watch": "pnpm run watch:devicescript",
+        "test:devicescript": "devicescript run src/main.ts --test --test-self-exit",
+        "test": "pnpm run test:devicescript",
+        "start": "pnpm run watch"
+    }
+}
