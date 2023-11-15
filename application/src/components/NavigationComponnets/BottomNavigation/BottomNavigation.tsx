@@ -6,7 +6,7 @@ export const BottomNavigation = () => {
         <>
 
 
-            <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            <div className="fixed sm:hidden bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
                 <div className="grid h-full divide-x max-w-lg grid-cols-4 mx-auto font-medium">
                     {
                         BUTTON_NAVIGATION_DATA.map(({ name, href, Icon }) => (
