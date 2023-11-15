@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Logo } from '..'
 import { WEB_NAVIGATION_DATA } from './NavigationData'
 
