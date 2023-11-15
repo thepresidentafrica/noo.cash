@@ -16,15 +16,16 @@ export const Noocash = () => {
             {/* Standard meta tags for SEO */}
             <title className="capitalize">Noo.Cash | Your trusted online payment platform for secure and hassle-free digital transactions</title>
             <meta name="description" content="Your trusted online payment platform for secure and hassle-free digital transactions. Join the cashless revolution with Noo.Cash." />
-            <meta name="keywords" content="Noo.Cash, online payments, secure transactions, digital payments, cashless payments" />
+            <meta name="keywords" content="Noo.Cash, online payments, secure transactions, digital payments, cashless payments, cash, mobile payments, stokvel, savings" />
 
             {/* Open Graph (OG) tags for social sharing */}
             <meta property="og:title" content="Noo.Cash - Your Cashless Payment Platform" />
+            
             <meta property="og:description" content="Your trusted online payment platform for secure and hassle-free digital transactions. Join the cashless revolution with Noo.Cash." />
-            <meta property="og:image" content="https://www.noo.cash/social/noocash-social.png" />
+            <meta property="og:image" content="https://cdn-za.icons8.com/9fERoXj9mUWCFg5LRIljrw/olDq7czmxE2pZRA77VLk1Q/noocash-social.png" />
             <meta property="og:url" content="https://www.noo.cash" />
             <meta property="og:type" content="website" />
-            <meta property="og:site_name" content="Noo.Cash" />
+            <meta property="og:site_name" content="noo.Ccsh" />
 
             {/* Twitter Card tags for Twitter sharing */}
             <meta name="twitter:card" content="summary_large_image" />
