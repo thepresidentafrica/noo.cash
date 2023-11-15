@@ -21,6 +21,17 @@
 
 // 1. Implement QR code scanning functionality.
 function scanQRCode(): void {
+/**
+ * 
+ * TODO : Priority Feature - Enable Airtime Payments
+
+** Description:** Prioritize the development of the core feature where users can make payments using airtime on their phones.
+
+** Subtasks:**
+1. Research and integrate airtime payment APIs.
+2. Implement a seamless airtime payment process.
+3. Ensure robust error handling for airtime payments.
+ */
   // Code to scan QR code goes here - to be implemented
 }
 

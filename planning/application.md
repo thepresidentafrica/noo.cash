@@ -11,14 +11,14 @@
 2. Develop a secure PIN entry system for payments.
 3. Integrate payment processing logic. -->
 
-## Issue 2: Priority Feature - Enable Airtime Payments
+<!-- TODO: Priority Feature - Enable Airtime Payments
 
 **Description:** Prioritize the development of the core feature where users can make payments using airtime on their phones.
 
 **Subtasks:**
 1. Research and integrate airtime payment APIs.
 2. Implement a seamless airtime payment process.
-3. Ensure robust error handling for airtime payments.
+3. Ensure robust error handling for airtime payments. -->
 
 ## Issue 3: Implement Shop Onboarding and Payment Acceptance
 
