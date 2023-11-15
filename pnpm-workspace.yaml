@@ -6,4 +6,5 @@ packages:
 - "worker"
 - libraries
 - devops
+- noo.device
 
