@@ -1,5 +1,5 @@
 /**
- * Issues:  Create Hero Section
+ * Issue :  Create Hero Section
 
 **Description:** Design and implement the hero section of the landing page to grab the user's attention and convey the core message of Noo.Cash.
 
