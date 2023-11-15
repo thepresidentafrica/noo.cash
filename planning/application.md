@@ -20,7 +20,7 @@
 2. Implement a seamless airtime payment process.
 3. Ensure robust error handling for airtime payments. -->
 
-## Issue 3: Implement Shop Onboarding and Payment Acceptance
+<!-- TODO: Implement Shop Onboarding and Payment Acceptance
 
 **Description:** Shops should be able to onboard and accept payments from the system. Additionally, they should be able to generate PINs and QR codes for customers.
 
@@ -30,7 +30,7 @@
 3. Enable shops to generate unique PINs for transactions.
 4. Implement QR code generation for shop payments.
 
-## Issue 4: Allow Users to Get Virtual or Physical Cards
+## Issue 4: Allow Users to Get Virtual or Physical Cards -->
 
 **Description:** Provide users with the option to obtain virtual or physical cards associated with their Noo.Cash accounts.
 
