@@ -35,7 +35,7 @@ function processPayment(): void {
 }
 /**
  * 
- * Issue : Priority Feature - Enable Airtime Payments
+ * TODO : Priority Feature - Enable Airtime Payments
 
 **Description:** Prioritize the development of the core feature where users can make payments using airtime on their phones.
 
