@@ -2,7 +2,9 @@
 export default {
   content: [
     "./index.html",
-    "./**/*.{tsx,html,scss}"
+    "./**/*.{tsx,html,scss}",
+    "./node_modules/flowbite/**/*.js"
+
   ],
   theme: {
     extend: {
@@ -11,6 +13,9 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+
+  ],
 }
 
