@@ -4,7 +4,7 @@ import { WEB_NAVIGATION_DATA } from './NavigationData'
 
 export const WebsiteNavigation = () => {
   return (
-    <div className="relative overflow-hidden bg-gray-50">
+    <div className="relative overflow-hidden bg-nocash-20">
       <div className="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full" aria-hidden="true">
         <div className="relative mx-auto h-full max-w-7xl">
           <svg
@@ -52,7 +52,7 @@ export const WebsiteNavigation = () => {
         </div>
       </div>
 
-      <div className=" pb-16  fixed top-0 z-20 w-full pt-6 sm:pb-24">
+      <div className=" pb-4  fixed top-0 z-20 w-full bg-nocash-20 pt-6  sm:pb-6">
         <div className="mx-auto max-w-7xl  px-4 sm:px-6">
           <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div className="flex flex-1 items-center md:absolute md:inset-y-0 md:left-0">
@@ -71,7 +71,7 @@ export const WebsiteNavigation = () => {
               <span className="inline-flex rounded-md shadow">
                 <NavLink
                   to="/auth"
-                  className="inline-flex items-center rounded-md border border-transparent bg-white px-4 py-2 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                  className="inline-flex  items-center rounded-md border border-transparent bg-white px-4 py-2 font-medium hover:bg-gray-50"
                 >
                   Log in
                 </NavLink>
