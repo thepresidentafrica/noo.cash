@@ -1,6 +1,7 @@
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import { WebsiteHomePage } from "../pages";
 import { WebsitePagelayout } from "../Layouts";
+import { GeneralRoutes } from "./GeneralRoutes";
 export const WebsiteRoutes= createBrowserRouter(
     createRoutesFromElements(
         <Route element={<WebsitePagelayout/>}>
@@ -9,6 +10,7 @@ export const WebsiteRoutes= createBrowserRouter(
                 <Route index path="/auth" element={<div>Login</div>}/>
                 <Route path="/auth/:option" element={<div>Login</div>}/>
             </Route>
+            {GeneralRoutes}
         </Route>
     )
 )
