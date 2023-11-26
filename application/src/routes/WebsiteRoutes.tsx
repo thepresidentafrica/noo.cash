@@ -1,14 +1,16 @@
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import { WebsiteHomePage } from "../pages";
+import { AuthPage, WebsiteHomePage } from "../pages";
 import { WebsitePagelayout } from "../Layouts";
 import { GeneralRoutes } from "./GeneralRoutes";
-export const WebsiteRoutes= createBrowserRouter(
+export const WebsiteRoutes = createBrowserRouter(
     createRoutesFromElements(
-        <Route element={<WebsitePagelayout/>}>
-            <Route path="/" element={<WebsiteHomePage/>}/>
+        <Route>
+            <Route element={<WebsitePagelayout />}> 
+                <Route index path="/" element={<WebsiteHomePage />} />
+            </Route>
             <Route path="/auth">
-                <Route index path="/auth" element={<div>Login</div>}/>
-                <Route path="/auth/:option" element={<div>Login</div>}/>
+                <Route index path="/auth" element={<AuthPage />} />
+                <Route path="/auth/:option" element={<AuthPage />} />
             </Route>
             {GeneralRoutes}
         </Route>
