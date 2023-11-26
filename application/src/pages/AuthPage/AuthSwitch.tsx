@@ -1,5 +1,5 @@
 import { RegisterForm, ForgotPasswordForm, NewPasswordForm } from "."
-import { LoginForm } from "./Forms/Loginform"
+import { LoginForm } from "./Forms/Login"
 
 export const AuthSwitch = () => {
     return {
