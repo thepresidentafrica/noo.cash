@@ -52,7 +52,7 @@ export const WebsiteNavigation = () => {
         </div>
       </div>
 
-      <div className=" pb-4  fixed top-0 z-20 w-full bg-nocash-20 pt-6  sm:pb-6">
+      <div className=" pb-4  fixed top-0 z-20 w-full bg-nocash-20 sm:pt-6  sm:pb-6">
         <div className="mx-auto max-w-7xl  px-4 sm:px-6">
           <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div className="flex flex-1 items-center md:absolute md:inset-y-0 md:left-0">
