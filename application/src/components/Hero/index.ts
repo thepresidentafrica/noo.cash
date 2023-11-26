@@ -1,2 +1,2 @@
-export * from './heroData';
+export * from './HeroData';
 export * from './WebsiteHero';
