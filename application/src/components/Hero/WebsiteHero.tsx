@@ -40,7 +40,7 @@ interface HeroSectionProps {
   }[]
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features, image }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features }) => {
   return (
     <div className="relative mx-auto max-w-7xl justify-center items-center textm-center grid sm:grid-cols-9  h-screen ">
       {/* Radial Gradient Background */}
