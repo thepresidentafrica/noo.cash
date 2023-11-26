@@ -1,4 +1,4 @@
-import { Hero } from "../../components"
+import { HERO_DATA, HeroSection } from "../../components"
 
 export const WebsiteHomePage = () => {
     return (
@@ -6,7 +6,7 @@ export const WebsiteHomePage = () => {
       
         {/* TODO:  subtracted Add prpper footer  additions*/}
         <section id="home" className="features bg-nocash-20 min-h-screen">
-        <Hero/>
+        <HeroSection {...HERO_DATA}/>
 
         </section>
         <section id="features" className="features min-h-screen">

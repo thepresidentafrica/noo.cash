@@ -1,0 +1,15 @@
+
+// Define a mixin to style occurrences of "Noo.Cash" to red
+@mixin highlightNooCash {
+    :not([class*='noo-cash']) {
+      // Select elements that don't have a class containing "noo-cash"
+      // Update this selector based on your specific use case
+      :contains('noo.cash') {
+        color: #E62CE8;
+      }
+    }
+  }
+  
+  // Apply the mixin globally
+  @include highlightNooCash;
+  
