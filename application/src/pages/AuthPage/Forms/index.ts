@@ -1,4 +1,4 @@
 export * from './ForgotPasswordForm';
-export * from './Loginform';
+export * from './Login';
 export * from './NewPasswordForm';
 export * from './RegisterFrom';
