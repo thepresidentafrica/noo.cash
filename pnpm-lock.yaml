@@ -19,6 +19,9 @@ importers:
       '@heroicons/react':
         specifier: ^2.0.18
         version: 2.0.18(react@18.2.0)
+      '@tailwindcss/forms':
+        specifier: ^0.5.7
+        version: 0.5.7(tailwindcss@3.3.5)
       '@tauri-apps/api':
         specifier: ^2.0.0-alpha.11
         version: 2.0.0-alpha.11
@@ -52,6 +55,9 @@ importers:
       react-helmet:
         specifier: ^6.1.0
         version: 6.1.0(react@18.2.0)
+      react-hook-form:
+        specifier: ^7.48.2
+        version: 7.48.2(react@18.2.0)
       react-icons:
         specifier: ^4.11.0
         version: 4.11.0(react@18.2.0)
@@ -113,7 +119,7 @@ importers:
     devDependencies:
       '@devicescript/cli':
         specifier: latest
-        version: 2.15.19
+        version: 2.15.20
 
 packages:
 
@@ -381,8 +387,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@devicescript/cli@2.15.19:
-    resolution: {integrity: sha512-K7wi5C588OgXoiki80z8bO22ZBJGpX7pdDDRxSri0FevOqCezUIt+7EQ+az4gVpveOjzZUJI2gsHhJ6EBCSl6Q==}
+  /@devicescript/cli@2.15.20:
+    resolution: {integrity: sha512-cB5cPYnxt8qiML2Nn/ObwF6YOyEoY2AIu7Eyv8UWjv45ahGOpsuH4xsb+g/9NNasHkNgxeb3YfnQDF4jzAj3Pg==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
@@ -902,6 +908,15 @@ packages:
     dependencies:
       defer-to-connect: 2.0.1
     dev: true
+
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.3.5
+    dev: false
 
   /@tauri-apps/api@2.0.0-alpha.11:
     resolution: {integrity: sha512-aw7jic+MQAe/LH4fYhbd3bwx3YjXhDIwqKJIn5QO4yKmGdVURIhZSFcyeKkSe4P6Itdto0Pcz99vLfkgBwdQKw==}
@@ -2322,6 +2337,15 @@ packages:
       react: 18.2.0
       react-fast-compare: 3.2.2
       react-side-effect: 2.1.2(react@18.2.0)
+    dev: false
+
+  /react-hook-form@7.48.2(react@18.2.0):
+    resolution: {integrity: sha512-H0T2InFQb1hX7qKtDIZmvpU1Xfn/bdahWBN1fH19gSe4bBEqTfmlr7H3XWTaVtiK4/tpPaI1F3355GPMZYge+A==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-icons@4.11.0(react@18.2.0):
