@@ -79,7 +79,7 @@ export const LoginForm = () => {
                         </div>
                         <div className="border-t pt-12 text-gray-500 dark:border-gray-800">
                             <div className="space-x-4 divide-x text-center">
-                                <NavLink to={"/"}> &copy; noo.cash</NavLink>
+                                <NavLink className={'text-sm'} to={"/"}> &copy; noo.cash</NavLink>
                                 <NavLink to="/contact" className="text-sm hover:text-nocash-900 dark:hover:text-gray-300">Contact</NavLink>
                                 <NavLink to="/privacy" className="text-sm hover:text-nocash-900 dark:hover:text-gray-300">Privacy & Terms</NavLink>
                             </div>
