@@ -1,0 +1,16 @@
+extend type Mutation {
+    authenticate(input: AuthInput): Response
+}
+
+input AuthInput {
+    email: String
+    password: String
+    option: AuthOptions
+    firstName: String
+    lastName: String
+    phone: String
+}
+enum AuthOptions {
+    LOGIN
+    SIGNUP
+}

@@ -8,7 +8,7 @@ export const Logo: FC<{ text?: string }> = ({ text }) => {
                 <span className="sr-only">noo.cash</span>
                 <img
                     className="h-8 w-auto sm:h-10"
-                    src="/logo.svg"
+                    src="/brand/logo.svg"
                     alt=""
                 />
                 {text && <p className='sm:text-5xl text-5xl text-nocash'>{text}</p>}

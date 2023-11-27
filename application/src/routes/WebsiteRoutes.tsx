@@ -7,11 +7,13 @@ export const WebsiteRoutes = createBrowserRouter(
         <Route>
             <Route element={<WebsitePagelayout />}> 
                 <Route index path="/" element={<WebsiteHomePage />} />
+                
             </Route>
             <Route path="/auth">
                 <Route index path="/auth" element={<AuthPage />} />
                 <Route path="/auth/:option" element={<AuthPage />} />
             </Route>
+            
             {GeneralRoutes}
         </Route>
     )

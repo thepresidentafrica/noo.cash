@@ -1,20 +1,57 @@
 {
-  "name": "backend",
+  "name": "api",
   "version": "0.0.10",
-  "description": "",
-  "main": "index.js",
+  "description": "Modern API Development using Nodejs,Graphql,express, docker, azure,github,hasura, prisma amd pm2.",
+  "main": "dist/stc/main.js",
   "scripts": {
-    "mg:prod": "pnpm prisma migrate deploy --schema prisma/dev.prisma ",
-    "mg:dev": "pnpm prisma migrate dev --schema prisma/dev.prisma ",
-    "p:dev": "pnpm prisma db pull --schema prisma/dev.prisma "
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev": "nodemon"
   },
-  "keywords": [],
-  "author": "",
+  "_moduleAliases": {
+    "@modules": "src/modules",
+    "@endpoints": "src/endpoints"
+  },
+  "repository": {
+    "url": "https://github.com/mitch1009/api-monorepo.git",
+    "type": "git"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "nodejs",
+    "hasura",
+    "graphql",
+    "prisma",
+    "pm2",
+    "docker"
+  ],
+  "author": {
+    "name": "Mitch Chimwemwe Chanza",
+    "url": "https://mitch.guru",
+    "email": "hello@mitch.guru"
+  },
   "license": "ISC",
-  "devDependencies": {
-    "prisma": "5.4.2"
-  },
   "dependencies": {
-    "@prisma/client": "5.4.2"
+    "@apollo/server": "^4.9.5",
+    "@graphql-tools/graphql-file-loader": "^8.0.0",
+    "@graphql-tools/load": "^8.0.0",
+    "@graphql-tools/schema": "^10.0.0",
+    "@prisma/client": "^5.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "graphql": "^16.8.1",
+    "module-alias": "^2.2.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.16",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.0",
+    "nodemon": "^3.0.1",
+    "prisma": "^5.6.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
   }
 }

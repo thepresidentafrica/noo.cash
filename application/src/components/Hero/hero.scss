@@ -1,0 +1,16 @@
+
+*{
+    h1 {
+    @apply text-4xl sm:text-5xl;
+  }
+  h3 {
+    @apply text-2xl sm:text-3xl text-nocash-400;
+    
+  }
+  p.sub {
+    @apply text-sm sm:text-base text-gray-600
+  }
+  p,a {
+    @apply text-lg sm:text-2xl
+  }
+  }
