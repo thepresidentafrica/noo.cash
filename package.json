@@ -6,7 +6,8 @@
   "scripts": {
     "app": "pnpm --filter application",
     "api": "pnpm --filter api",
-    "p": "pnpm --filter president",
+    "pres": "pnpm --filter president",
+    "op": "pnpm --filter opo2nity",
     "device": "pnpm --filter noo.device"
   },
   "keywords": [],
