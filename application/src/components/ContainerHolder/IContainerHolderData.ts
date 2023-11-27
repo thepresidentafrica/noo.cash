@@ -29,10 +29,10 @@ export const CONTAINER_HOLDER_DATA :IContainerHolderData= {
     },
     accessories: {
         name: "accessories",
-        title: "for Accessories",
+        title: "Featured Accessories",
         image: {
             src: "/accessories.webp",
-            alt: "Shoppers"
+            alt: "Accessories"
         },
         description: "The following Accessories are available for any use. We will be adding more accessories in the future. ",
     },

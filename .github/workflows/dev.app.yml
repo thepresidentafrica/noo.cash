@@ -26,7 +26,17 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GIT_TOKEN }}
-
+    - name: Build and Push Docker Image
+      run: |
+        echo "
+        VITE_FIREBASE_apiKey=${{secrets.VITE_FIREBASE_apiKey}}
+        VITE_FIREBASE_authDomain=${{secrets.VITE_FIREBASE_authDomain}}
+        VITE_FIREBASE_projectId=${{secrets.VITE_FIREBASE_projectId}}
+        VITE_FIREBASE_storageBucket=${{secrets.VITE_FIREBASE_storageBucket}}
+        VITE_FIREBASE_messagingSenderId=${{secrets.VITE_FIREBASE_messagingSenderId}}
+        VITE_FIREBASE_appId=${{secrets.VITE_FIREBASE_appId}}
+        VITE_FIREBASE_measurementId=${{secrets.VITE_FIREBASE_measurementId}}
+        ">.env
     - name: Build and Push Docker Image
       run: |
         docker build -t ghcr.io/${{ github.repository_owner }}/noocash:ui-dev .
