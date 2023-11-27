@@ -1,3 +1,4 @@
+export * from './ContainerHolder';
 export * from './Hero';
 export * from './Logo';
 export * from './NavigationComponnets';

@@ -1,0 +1,44 @@
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.5" y1="0.06853175" x2="0.5" y2="0.91828525" id="gradient_1">
+      <stop offset="0%" stop-color="#E68E00" />
+      <stop offset="3.6%" stop-color="#E38400" />
+      <stop offset="17.1%" stop-color="#DB6200" />
+      <stop offset="29.9%" stop-color="#D44A00" />
+      <stop offset="41.7%" stop-color="#D03B00" />
+      <stop offset="51.5%" stop-color="#CF3600" />
+      <stop offset="87.8%" stop-color="#D22900" />
+      <stop offset="100%" stop-color="#D42400" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.061478972" y1="-0.005445242" x2="1.0700657" y2="0.67488146" id="gradient_2">
+      <stop offset="0%" stop-color="#F52537" />
+      <stop offset="29.300001%" stop-color="#F32536" />
+      <stop offset="46.5%" stop-color="#EA2434" />
+      <stop offset="60.499996%" stop-color="#DC2231" />
+      <stop offset="72.899994%" stop-color="#C8202C" />
+      <stop offset="84.1%" stop-color="#AE1E25" />
+      <stop offset="94.4%" stop-color="#8F1A1D" />
+      <stop offset="100%" stop-color="#7A1818" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="-0.1309" y1="0.9125629" x2="0.8937001" y2="-0.07158421" id="gradient_3">
+      <stop offset="0%" stop-color="#D96AB1" />
+      <stop offset="13.7%" stop-color="#D9538B" />
+      <stop offset="49.499996%" stop-color="#D91A2A" />
+      <stop offset="57.5%" stop-color="#D31A29" />
+      <stop offset="68%" stop-color="#C21926" />
+      <stop offset="79.99999%" stop-color="#A71821" />
+      <stop offset="92.9%" stop-color="#811619" />
+      <stop offset="100%" stop-color="#691515" />
+    </linearGradient>
+    <path d="M48 0L48 0L48 48L0 48L0 0L48 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Microsoft Office 2019" clip-path="url(#clip_1)">
+    <path d="M48 0L48 0L48 48L0 48L0 0L48 0Z" id="Microsoft-Office-2019" fill="none" stroke="none" />
+    <path d="M35.883 7.341C37.726 7.85 39 9.508 39 11.397L39 36.559C39 38.465 37.699 40.129 35.832 40.624L24.29 43.863L28 36L28 11L24.852 4.115L35.883 7.341L35.883 7.341Z" id="Shape" fill="url(#gradient_1)" stroke="none" />
+    <path d="M28 35L28 38.927C28 42.73 24.176 45.176 20.981 43.418L14.045 38.973C13.243 38.507 12.809 37.511 13.081 36.516C13.334 35.59 14.202 35 15.115 35L28 35L28 35Z" id="Shape" fill="url(#gradient_2)" stroke="none" />
+    <path d="M21.946 4.526L10.022 11.312C8.772 12.024 8 13.351 8 14.789L8 33.218C8 34.575 9.459 35.433 10.645 34.772L15.117 32.281C15.662 31.978 16 31.402 16 30.778L16 17.743C16 16.436 16.78 15.263 17.963 14.794L28 11.308L28 8.218C28 5.014 24.669 2.983 21.946 4.526L21.946 4.526Z" id="Shape" fill="url(#gradient_3)" stroke="none" />
+  </g>
+</svg>

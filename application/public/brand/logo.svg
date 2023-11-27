@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1100px" height="1100px" viewBox="0 0 1100 1100" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 550C0 246.243 246.243 0 550 0C853.757 0 1100 246.243 1100 550C1100 853.757 853.757 1100 550 1100C246.243 1100 0 853.757 0 550Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="logo" fill-opacity="1">
+    <path d="M1100 0L1100 0L1100 1100L0 1100L0 0L1100 0Z" id="logo" fill="none" stroke="none" />
+    <g id="combined">
+      <g id="Oval">
+        <use stroke="none" fill="#670AA1" xlink:href="#path_1" fill-rule="evenodd" />
+        <g clip-path="url(#clip_1)">
+          <use xlink:href="#path_1" fill="none" stroke="#F8C822" stroke-width="160" />
+        </g>
+        <g clip-path="url(#clip_1)">
+          <use xlink:href="#path_1" fill="none" stroke="#670AA1" stroke-width="140" />
+        </g>
+        <g clip-path="url(#clip_1)">
+          <use xlink:href="#path_1" fill="none" stroke="#FC44FE" stroke-width="120" />
+        </g>
+        <g clip-path="url(#clip_1)">
+          <use xlink:href="#path_1" fill="none" stroke="#808080" stroke-width="2" />
+        </g>
+      </g>
+      <g id="bars" transform="translate(293 244)">
+        <path d="M18 102C22.4189 102 26 105.581 26 110L26 502C26 506.419 22.4189 510 18 510L8 510C3.58112 510 0 506.419 0 502L0 110C0 105.581 3.58112 102 8 102L18 102Z" id="Rectangle-2" fill="#FFFFFF" stroke="none" />
+        <path d="M506 102C510.419 102 514 105.581 514 110L514 502C514 506.419 510.419 510 506 510L496 510C491.581 510 488 506.419 488 502L488 110C488 105.581 491.581 102 496 102L506 102Z" id="Rectangle-6" fill="#FEFEFE" stroke="none" />
+        <path d="M384 51C388.419 51 392 54.5811 392 59L392 553C392 557.419 388.419 561 384 561L374 561C369.581 561 366 557.419 366 553L366 59C366 54.5811 369.581 51 374 51L384 51Z" id="Rectangle-3" fill="#FBF9FB" stroke="none" />
+        <path d="M262 0C266.419 0 270 3.58112 270 8L270 604C270 608.419 266.419 612 262 612L252 612C247.581 612 244 608.419 244 604L244 8C244 3.58112 247.581 0 252 0L262 0Z" id="Rectangle-4" fill="#FEC68E" stroke="none" />
+        <path d="M140 51C144.419 51 148 54.5811 148 59L148 553C148 557.419 144.419 561 140 561L130 561C125.581 561 122 557.419 122 553L122 59C122 54.5811 125.581 51 130 51L140 51Z" id="Rectangle-5" fill="#FFFFFF" stroke="none" />
+      </g>
+    </g>
+  </g>
+</svg>

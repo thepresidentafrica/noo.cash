@@ -1,0 +1,51 @@
+name: Opo2mnity Staging Environment
+on:
+  pull_request:
+    types: [closed]
+    paths:
+        "president/**"
+  workflow_dispatch:
+env:
+    VITE_APP_MODE: website
+    VITE_APP_TITLE: The President Africa
+jobs:
+  build-president-dev:
+    defaults:
+      run:
+        working-directory: president
+    if: github.event.pull_request.merged==true
+    name: build-noocash-dev
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GIT_TOKEN }}
+
+    - name: Build and Push Docker Image
+      run: |
+        docker build -t ghcr.io/${{ github.repository_owner }}/noocash:ui-dev .
+        docker push ghcr.io/${{ github.repository_owner }}/noocash:ui-dev
+     
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-president-dev
+    name: deploy-noocash-dev
+    steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Login to azure
+            uses: azure/login@v1
+            with:
+              creds: ${{ secrets.PRESIDENT_DEV_AZURE_CREDENTIALS }}
+          - name: Deploy to Azure Web App
+            uses: azure/webapps-deploy@v2
+            with:
+              app-name: ${{secrets.PRESIDENTDEV_APP_NAME}}
+              images: 'ghcr.io/${{ github.repository_owner }}/president:website'
+      

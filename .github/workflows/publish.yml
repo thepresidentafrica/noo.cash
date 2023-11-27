@@ -1,0 +1,70 @@
+name: Publish to GitHub Packages
+on:
+  push:
+    tags:
+      - thepresident-ui@*.*.*
+  pull_request:
+   types: 
+    - closed
+   paths:
+      - "ui-lib"
+jobs:
+
+  release-please:
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifacts
+      - name: Create release
+        uses: google-github-actions/release-please-action@v2
+        with:
+          token: ${{ secrets.ATORIA_AUTH }}
+          bump-patch-for-minor-pre-major: true
+          release-type: node
+          package-name: "react-ui"
+          # pull-request-title-pattern: ":large_orange_diamond: new release available"
+          # bump-patch-for-minor-pre-major: true
+          pull-request-title-pattern: "chore${scope}: ${component} ${version}"
+          
+  publish:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com
+          scope: "@mitch1009"
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.ATORIA_AUTH}}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - name: Install dependencies
+
+        run: pnpm install --no-frozen-lockfile
+      - run: pnpm build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts
+          path: dist
+      - name: Publish package
+        run: pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ATORIA_AUTH }}
