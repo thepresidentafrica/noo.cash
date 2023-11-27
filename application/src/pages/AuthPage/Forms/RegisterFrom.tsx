@@ -6,16 +6,20 @@ import { useState } from "react";
 
 export const RegisterForm = () => {
     const { register, getValues, reset, formState:{ errors } } = useForm({ mode: "onChange" });
-    const [state, setState] = useState({
+    const [state, _setState] = useState({
         submitting: false, showPassword: false
     })
     const handleRegister = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            username: data.get('username'),
-            password: data.get('password'),
-        });
+        try {
+            const dat =getValues()
+            console.log(dat)
+            reset()
+        } catch (error) {
+            console.log(error)
+        } finally {
+            console.log(errors)
+        }
     }
     return (<>
         <form onSubmit={handleRegister}>

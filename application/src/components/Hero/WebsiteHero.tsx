@@ -20,7 +20,7 @@ export const Hero = () => {
 // components/HeroSection.tsx
 import "./hero.scss"
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 interface HeroSectionProps {
   title: string;
@@ -41,7 +41,6 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features,image }) => {
-  const loc =useLocation()
   return (
     <div className="relative mx-auto max-w-7xl mt-20 sm:mt-0 sm:justify-center sm:items-center textm-center grid sm:grid-cols-9  h-screen ">
       {/* Radial Gradient Background */}
