@@ -21,6 +21,9 @@ export const WebsiteHomePage = () => {
         <section id="features" className="features min-h-screen">
             {/* <p>Features Section</p> */}
         </section>
+        <section className="max-w-7xl px-4 mx-auto">
+            <ContainerHolder name={"accessories"}></ContainerHolder>
+        </section>
         <section id="how-it-works" className="features min-h-screen">
         {/* <p>HOW  Section</p> */}
 
