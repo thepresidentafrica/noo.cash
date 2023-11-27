@@ -2,7 +2,7 @@ name: noo.cash Prod Environment
 on:
   push:
     tags:
-      - "ui-*.*.*"
+      - "noo.cash@*.*.*"
     paths:
         "application/**"
   workflow_dispatch:
