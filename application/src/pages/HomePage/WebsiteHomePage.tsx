@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { ContainerHolder, HERO_DATA, HeroSection } from "../../components"
 import { useScroll } from "../../hooks"
 import { useLocation } from "react-router-dom";
+import { AccessoriesComponent } from "../../components/Accessories";
 
 export const WebsiteHomePage = () => {
     const sectionRef = useRef(null);
@@ -22,7 +23,9 @@ export const WebsiteHomePage = () => {
             {/* <p>Features Section</p> */}
         </section>
         <section className="max-w-7xl px-4 mx-auto">
-            <ContainerHolder name={"accessories"}></ContainerHolder>
+            <ContainerHolder name={"accessories"}>
+            <AccessoriesComponent />
+            </ContainerHolder>
         </section>
         <section id="how-it-works" className="features min-h-screen">
         {/* <p>HOW  Section</p> */}
