@@ -18,9 +18,9 @@ export const Hero = () => {
 }
 
 // components/HeroSection.tsx
-
+import "./hero.scss"
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 interface HeroSectionProps {
   title: string;
@@ -40,15 +40,16 @@ interface HeroSectionProps {
   }[]
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features,image }) => {
+  const loc =useLocation()
   return (
     <div className="relative mx-auto max-w-7xl justify-center items-center textm-center grid sm:grid-cols-9  h-screen ">
       {/* Radial Gradient Background */}
       <div className="absolute inset-0 bgm-gradient-radial"></div>
 
       {/* Hero Content */}
-      <div className="z-10 px-4 sm:px-0 col-span-5  text-j white">
-        <h1 className=" text-left  font-bold mb-4">{title}</h1>
+      <div className="z-10 px-4 sm:px-0 col-span-4  text-j white">
+        <h1 className=" text-left  text-[48px] font-bold mb-4">{title}</h1>
         <p className=" mb-8">{description}</p>
         <NavLink
           to={cta.url}
@@ -57,21 +58,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, ct
           {cta.label}
         </NavLink>
       </div>
-
+    <div className="col-span-3">
+      <img src={image?.src} alt={image?.alt} />
+    </div>
       {/* Hero feature List */}
-      <div className="feature hidden sm:block col-span-4">
+      <div className="feature hidden sm:block col-span-2">
         {features?.map((feature) => (
           <div key={feature.title} className="feature-item p-4 hidden sm:block">
             <div className="feature-icon">{feature.icon}</div>
-            <h3 className="feature-title">{feature.title}</h3>
+            <h3 className="feature-title text-xl text-nocash-500">{feature.title}</h3>
             <p className="feature-description line-clamp-2 sub">{feature.description}</p>
             <div className="flex items-center py-3">
-              <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
+              <div className="w-full h-px bg-gradient-to-r from-transparent via-nocash-500 to-transparent"></div>
             </div>
           </div>
 
         ))}
       </div>
+    
     </div>
   );
 };
