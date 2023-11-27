@@ -56,7 +56,7 @@
     "eslint-plugin-storybook": "^0.6.11",
     "file-loader": "^6.2.0",
     "husky": "^8.0.0",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.31",
     "prop-types": "^15.8.1",
     "rollup": "^3.21.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
