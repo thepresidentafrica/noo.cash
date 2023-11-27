@@ -43,23 +43,32 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features,image }) => {
   const loc =useLocation()
   return (
-    <div className="relative mx-auto max-w-7xl justify-center items-center textm-center grid sm:grid-cols-9  h-screen ">
+    <div className="relative mx-auto max-w-7xl mt-20 sm:mt-0 sm:justify-center sm:items-center textm-center grid sm:grid-cols-9  h-screen ">
       {/* Radial Gradient Background */}
       <div className="absolute inset-0 bgm-gradient-radial"></div>
 
       {/* Hero Content */}
       <div className="z-10 px-4 sm:px-0 col-span-4  text-j white">
-        <h1 className=" text-left  text-[48px] font-bold mb-4">{title}</h1>
-        <p className=" mb-8">{description}</p>
+        <h1 data-aos="fade-up" className=" text-left text-2xl leading-normal sm:text-[48px] font-bold mb-4">{title}</h1>
+        <p data-aos="fade-up" className="hidden sm:block mb-8">{description}</p>
         <NavLink
           to={cta.url}
-          className="px-6 py-3 bg-nocash-500 text-white hover:text-white rounded-full hover:bg-nocash-600 transition duration-300"
+          className="px-6 hidden w-1/3 text-center xl:flex md:flex justify-center items-center lg:flex  py-3 bg-nocash-500 text-white hover:text-white rounded-full hover:bg-nocash-600 transition duration-300"
         >
           {cta.label}
         </NavLink>
       </div>
-    <div className="col-span-3">
-      <img src={image?.src} alt={image?.alt} />
+    <div className="col-span-3 px-4">
+      <img className="-mt-36 sm:mt-0" src={image?.src} alt={image?.alt} />
+     <div className="lg:hidden md:hidden sm:hidden">
+     <p className=" -mt-24 sm:mt-0 sm:hidden mb-8">{description}</p>
+      <NavLink
+          to={cta.url}
+          className="px-6 sm:hidden  py-3 bg-nocash-500 text-white hover:text-white rounded-full hover:bg-nocash-600 transition duration-300"
+        >
+          {cta.label}
+        </NavLink>
+     </div>
     </div>
       {/* Hero feature List */}
       <div className="feature hidden sm:block col-span-2">

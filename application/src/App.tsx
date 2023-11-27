@@ -4,7 +4,15 @@ import { appRoutes } from "./routes"
 import { ApolloProvider } from "@apollo/client"
 import { Helmet } from "react-helmet"
 import { StructuredData } from "./components"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react"
 export const Noocash = () => {
+ useEffect(() => {
+  AOS.init({
+    duration: 1000
+  })
+ })
   return (
     <>
       <ApolloProvider client={nooCashClient}>

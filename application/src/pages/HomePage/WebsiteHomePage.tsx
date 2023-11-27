@@ -15,7 +15,7 @@ export const WebsiteHomePage = () => {
         <HeroSection {...HERO_DATA}/>
       
         </section>
-        <section className="max-w-7xl mx-auto">
+        <section className="max-w-7xl px-4 mx-auto">
             <ContainerHolder name={"shoppers"}></ContainerHolder>
         </section>
         <section id="features" className="features min-h-screen">
