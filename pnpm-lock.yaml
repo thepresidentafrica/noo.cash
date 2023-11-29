@@ -263,6 +263,9 @@ importers:
 
   sombatout:
     dependencies:
+      '@headlessui/vue':
+        specifier: ^1.7.16
+        version: 1.7.16(vue@3.3.9)
       '@heroicons/vue':
         specifier: ^2.0.18
         version: 2.0.18(vue@3.3.9)
@@ -3750,6 +3753,15 @@ packages:
       client-only: 0.0.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@headlessui/vue@1.7.16(vue@3.3.9):
+    resolution: {integrity: sha512-nKT+nf/q6x198SsyK54mSszaQl/z+QxtASmgMEJtpxSX2Q0OPJX0upS/9daDyiECpeAsvjkoOrm2O/6PyBQ+Qg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.3.9
     dev: false
 
   /@heroicons/react@2.0.18(react@18.2.0):
