@@ -1,6 +1,7 @@
 packages:
 - "application"
 - "backend"
+- sombatout
 - "frontend"
 - "ui"
 - "worker"

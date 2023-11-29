@@ -1,0 +1,8 @@
+version: '3'
+name: "sombatout"
+services:
+  app:
+    image: ghcr.io/thepresidentafrica/sombatout:ui
+    ports:
+      - 80:80
+    restart: always
