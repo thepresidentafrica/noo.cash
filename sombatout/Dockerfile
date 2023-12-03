@@ -33,5 +33,6 @@ EXPOSE 80
 ENV NUXT_PORT=80
 ENV NUXT_HOST=0.0.0.0
 
+
 # Run the Node.js application
 CMD ["node", ".output/server/index.mjs"]
