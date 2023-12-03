@@ -242,7 +242,7 @@ import sombatout from '../public/sombatout.png';
   const navigation = {
     categories: [
       {
-        name: 'Women',
+        name: 'nearby',
         featured: [
           {
             name: 'New Arrivals',
