@@ -58,11 +58,11 @@ jobs:
           - name: Login to azure
             uses: azure/login@v1
             with:
-              creds: ${{ secrets.PRESIDENT_DEV_AZURE_CREDENTIALS }}
+              creds: ${{ secrets.SOMATOUT_DEV_CREDENTIALS }}
               enable-AzPSSession: true
           - name: Deploy to Azure Web App
             uses: azure/webapps-deploy@v2
             with:
-              app-name: ${{secrets.SOMBATOUT_DEV_APP_NAME}}
+              app-name: 'sombatout-dev'
               images: 'ghcr.io/${{ github.repository_owner }}/sombatout:dev'
       
