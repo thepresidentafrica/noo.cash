@@ -1,0 +1,71 @@
+name: Enginear Staging Environment
+on:
+  push:
+    paths:
+        "enginear/**"
+  pull_request:
+    types: [closed]
+    paths:
+        "enginear/**"
+  workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
+env:
+    APP_MODE: website
+    NUXT_APP_TITLE:  Enginear
+jobs:
+  build-enginear-dev:
+    defaults:
+      run:
+        working-directory: enginear
+    # if: github.event.pull_request.merged==true
+    name: build-enginear-dev
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GIT_TOKEN }}
+    - name: Setup Environmental Variables
+      run: |
+        echo "
+        ENGINEAR_FIREBASE_API_KEY=${{secrets.ENGINEAR_FIREBASE_API_KEY}}
+        ENGINEAR_FIREBASE_AUTH_DOMAIN=${{secrets.ENGINEAR_FIREBASE_AUTH_DOMAIN}}
+        ENGINEAR_FIREBASE_PROJECT_ID=${{secrets.ENGINEAR_FIREBASE_PROJECT_ID}}
+        ENGINEAR_FIREBASE_STORAGE_BUCKET=${{secrets.ENGINEAR_FIREBASE_STORAGE_BUCKET}}
+        ENGINEAR_FIREBASE_MESSAGING_SENDER_ID=${{secrets.ENGINEAR_FIREBASE_MESSAGING_SENDER_ID}}
+        ENGINEAR_FIREBASE_APP_ID=${{secrets.ENGINEAR_FIREBASE_APP_ID}}
+        ENGINEAR_FIREBASE_MEASUREMENT_ID=${{secrets.ENGINEAR_FIREBASE_MEASUREMENT_ID}}
+        ">.env
+    - name: Build and Push Docker Image
+      run: |
+        docker build -t ghcr.io/${{ github.repository_owner }}/enginear:dev .
+        docker push ghcr.io/${{ github.repository_owner }}/enginear:dev
+     
+  # deploy-enginear-dev:
+  #   runs-on: ubuntu-latest
+  #   needs: build-enginear-dev
+  #   name: deploy-enginear-dev
+  #   steps:
+  #         - name: Checkout code
+  #           uses: actions/checkout@v2
+  #         - name: Login to azure
+  #           uses: azure/login@v1
+  #           with:
+  #             creds: ${{ secrets.ENGINEAR_DEV_CREDENTIALS }}
+  #             client-id: ${{ secrets.ENGINEAR_DEV_CLIENT_ID }}
+  #             tenant-id: ${{ secrets.ENGINEAR_DEV_TENANT_ID }}
+  #             subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  #             enable-AzPSSession: true
+  #         - name: Deploy to Azure Web App
+  #           uses: azure/webapps-deploy@v2
+  #           with:
+  #             app-name: 'enginear-dev'
+  #             images: 'ghcr.io/${{ github.repository_owner }}/enginear:dev'
+      
