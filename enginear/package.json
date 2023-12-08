@@ -1,0 +1,22 @@
+{
+  "name": "enginear",
+  "private": true,
+  "version": "0.0.10",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "docker:build": "docker build -t enginear:latest ."
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.10.1",
+    "nuxt": "^3.8.2",
+    "nuxt-auth-utils": "^0.0.10",
+    "vue": "^3.3.10",
+    "vue-router": "^4.2.5"
+  }
+}
