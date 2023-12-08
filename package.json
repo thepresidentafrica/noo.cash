@@ -6,6 +6,7 @@
   "scripts": {
     "app": "pnpm --filter application",
     "api": "pnpm --filter api",
+    "enginear": "pnpm --filter enginear",
     "pres": "pnpm --filter president",
     "ui": "pnpm --filter president",
     "op": "pnpm --filter opo2nity",
