@@ -1,4 +1,4 @@
-name: Enginear Staging Environment
+name: Sombatout Staging Environment
 on:
   push:
     paths:
@@ -45,8 +45,8 @@ jobs:
         ">.env
     - name: Build and Push Docker Image
       run: |
-        docker build -t ghcr.io/${{ github.repository_owner }}/enginear:dev .
-        docker push ghcr.io/${{ github.repository_owner }}/enginear:dev
+        docker build -t ghcr.io/${{ github.repository_owner }}/sombatout:dev .
+        docker push ghcr.io/${{ github.repository_owner }}/sombatout:dev
      
   deploy-sombatout-dev:
     runs-on: ubuntu-latest
