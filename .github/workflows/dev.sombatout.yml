@@ -1,8 +1,5 @@
 name: Sombatout Staging Environment
 on:
-  push:
-    paths:
-        "sombatout/**"
   pull_request:
     types: [closed]
     paths:
