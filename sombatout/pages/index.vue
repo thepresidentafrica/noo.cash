@@ -1,5 +1,5 @@
 <template>
-    <div class="space-x-4 flex justify-center h-screen items-center">
+    <div class="space-x-4 sm:flex justify-center h-screen items-center">
         <img src="/sombatout.svg" alt="">
         <div class="e">
             <h1 class="text-4xl ">Welcome to sombatout</h1>

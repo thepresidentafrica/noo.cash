@@ -35,3 +35,4 @@ ENV HOST=0.0.0.0
 
 # Run the Node.js application
 CMD ["node", ".output/server/index.mjs"]
+
