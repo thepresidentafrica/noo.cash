@@ -48,24 +48,20 @@ jobs:
         docker build -t ghcr.io/${{ github.repository_owner }}/enginear:dev .
         docker push ghcr.io/${{ github.repository_owner }}/enginear:dev
      
-  # deploy-enginear-dev:
-  #   runs-on: ubuntu-latest
-  #   needs: build-enginear-dev
-  #   name: deploy-enginear-dev
-  #   steps:
-  #         - name: Checkout code
-  #           uses: actions/checkout@v2
-  #         - name: Login to azure
-  #           uses: azure/login@v1
-  #           with:
-  #             creds: ${{ secrets.ENGINEAR_DEV_CREDENTIALS }}
-  #             client-id: ${{ secrets.ENGINEAR_DEV_CLIENT_ID }}
-  #             tenant-id: ${{ secrets.ENGINEAR_DEV_TENANT_ID }}
-  #             subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-  #             enable-AzPSSession: true
-  #         - name: Deploy to Azure Web App
-  #           uses: azure/webapps-deploy@v2
-  #           with:
-  #             app-name: 'enginear-dev'
-  #             images: 'ghcr.io/${{ github.repository_owner }}/enginear:dev'
+  deploy-enginear-dev:
+    runs-on: ubuntu-latest
+    needs: build-enginear-dev
+    name: deploy-enginear-dev
+    steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Login to azure
+            uses: azure/login@v1
+            with:
+              creds: ${{ secrets.ENGINEARDEV_CREDENTIALS }}
+          - name: Deploy to Azure Web App
+            uses: azure/webapps-deploy@v2
+            with:
+              app-name: ${{ secrets.AZ_ENGINEAR_APP_NAME }}
+              images: 'ghcr.io/${{ github.repository_owner }}/enginear:dev'
       
