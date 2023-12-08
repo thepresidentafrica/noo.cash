@@ -30,8 +30,10 @@ COPY --from=build /app/.output ./.output
 
 # Expose the port on which the app will be running
 EXPOSE 80
-ENV NUXT_PORT=80
+ENV PORT=80
 ENV NUXT_HOST=0.0.0.0
+ENV HOST=0.0.0.0
+
 
 # Run the Node.js application
 CMD ["node", ".output/server/index.mjs"]

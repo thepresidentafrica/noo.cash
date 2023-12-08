@@ -19,25 +19,20 @@ COPY . .
 # Build the React app
 RUN pnpm build
 
-# Stage 2: Run the app using a distroless base image
-FROM nginx:alpine
-
-# Remove the default Nginx configuration
-RUN rm /etc/nginx/conf.d/default.conf
-
-# Copy the custom Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/
-COPY sitemap.xml /usr/share/nginx/html
-COPY robots.txt /usr/share/nginx/html
+# Stage 2: Run the app using a distroless Node.js base image
+FROM  node:18-alpine
 
 # Set the working directory inside the container
-WORKDIR /usr/share/nginx/html
+WORKDIR /app
 
 # Copy the built app from the previous stage
-COPY --from=build /app/dist .
+COPY --from=build /app/.output ./.output
 
 # Expose the port on which the app will be running
 EXPOSE 80
+ENV PORT=80
+ENV HOST=0.0.0.0
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Run the Node.js application
+CMD ["node", ".output/server/index.mjs"]
+

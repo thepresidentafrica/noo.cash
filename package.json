@@ -13,7 +13,18 @@
     "device": "pnpm --filter noo.device",
     "so": "pnpm --filter sombatout"
   },
-  "keywords": ["sombatout", "noo.cash","opo2nity", "president", "api", "cash", "payments"],
+  "keywords": [
+    "sombatout",
+    "noo.cash",
+    "opo2nity",
+    "president",
+    "api",
+    "cash",
+    "payments"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
+  }
 }

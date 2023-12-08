@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         working-directory: sombatout
-    if: github.event.pull_request.merged==true
+    # if: github.event.pull_request.merged==true
     name: build-sombatout-dev
     runs-on: ubuntu-latest
     steps:
@@ -55,7 +55,8 @@ jobs:
           - name: Login to azure
             uses: azure/login@v1
             with:
-              creds: ${{ secrets.SOMBATOUT_DEV_AZURE_CREDENTIALS }}
+              creds: ${{ secrets.SOMBATOUT_DEV_CREDENTIALS }}
+             
               enable-AzPSSession: true
           - name: Deploy to Azure Web App
             uses: azure/webapps-deploy@v2
