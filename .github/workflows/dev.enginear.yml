@@ -1,8 +1,5 @@
 name: Enginear Staging Environment
 on:
-  push:
-    paths:
-        "enginear/**"
   pull_request:
     types: [closed]
     paths:
@@ -19,7 +16,7 @@ jobs:
     defaults:
       run:
         working-directory: enginear
-    # if: github.event.pull_request.merged==true
+    if: github.event.pull_request.merged==true
     name: build-enginear-dev
     runs-on: ubuntu-latest
     steps:

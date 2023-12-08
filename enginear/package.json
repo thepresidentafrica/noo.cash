@@ -14,6 +14,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "@unlighthouse/nuxt": "^0.10.4",
     "nuxt": "^3.8.2",
     "nuxt-auth-utils": "^0.0.10",
     "vue": "^3.3.10",
