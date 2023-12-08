@@ -4,5 +4,5 @@ services:
   app:
     image: ghcr.io/thepresidentafrica/sombatout:dev
     ports:
-      - 80:3000
+      - 80:80
     restart: always
