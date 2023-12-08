@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 env:
     APP_MODE: website
-    NUXT_APP_TITLE:  Sombatout | Your one stop shop for all things 
+    NUXT_APP_TITLE:  Sombatout | Your one stop shop for all things in africa and beyond
 jobs:
   build-sombatout-prod:
     defaults:
@@ -54,6 +54,6 @@ jobs:
           - name: Deploy to Azure Web App
             uses: azure/webapps-deploy@v2
             with:
-              app-name: ${{secrets.SOMBATOUT_APP_NAME}}
+              app-name: ${{secrets.SOMBATOUT_AZURE_APP_NAME}}
               images: 'ghcr.io/${{ github.repository_owner }}/sombatout:prod'
       
