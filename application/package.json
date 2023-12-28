@@ -1,13 +1,14 @@
 {
   "name": "application",
   "private": true,
-  "version": "0.0.100",
+  "version": "0.0.101",
   "description": "noo.cash application",
   "type": "module",
   "scripts": {
     "dev": "vite --host --open",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "change": "pnpm changeset",
     "tauri": "tauri"
   },
   "dependencies": {
