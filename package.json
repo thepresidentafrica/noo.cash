@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "app": "pnpm --filter application",
+    "no": "pnpm --filter no-cash",
     "api": "pnpm --filter api",
     "enginear": "pnpm --filter enginear",
     "pres": "pnpm --filter president",
     "ui": "pnpm --filter president",
     "op": "pnpm --filter opo2nity",
     "device": "pnpm --filter noo.device",
-    "so": "pnpm --filter sombatout"
+    "so": "pnpm --filter sombatout",
+    "change": "pnpm changeset"
   },
   "keywords": [
     "sombatout",

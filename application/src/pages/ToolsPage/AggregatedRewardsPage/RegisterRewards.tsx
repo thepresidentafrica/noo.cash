@@ -32,10 +32,10 @@ export const RegisterRewards: FC<IRewardProps> = ({ open, setOpen, type }) => {
                         >
                             <Dialog.Panel className="relative space-y-3 divide-y transform overflow-hidden rounded-lg bg-white  pb-4 pt-5 text-left shadow-xl transition-all  sm:w-full sm:max-w-3xl">
                                 <div className="top sm:px-4">
-                                    <h2 className="text-xl font-bold">Aggregate Rewards Account</h2>
+                                    <h2 className="text-xl font-bold">Aggregate <span className="text-nocash capitalize">{type}</span> Rewards Account</h2>
                                 </div>
                                 <div className="px-4">
-                                    <p>Please note that this account will be used to store your rewards. if you already have a noo.cash account please <NavLink className="underline text-nocash" to="/auth/login?o=rewards">Login here</NavLink > to proceed with your rewards account. if you are new to noo.cash please <NavLink className="underline text-nocash" to="/auth/register?o=rewards">Register here</NavLink></p>
+                                    <p>Please note that this account will be used to store your rewards. if you already have a noo.cash account please <NavLink className="underline text-nocash" to={`/auth/login?o=rewards&t=${type}`}>Login here</NavLink > to proceed with your rewards account. if you are new to noo.cash please <NavLink className="underline text-nocash" to={`/auth/register?o=rewards&t=${type}`}>Register here</NavLink></p>
                                 <div className="mt-5 sm:p-6 sm:mt-6 flex space-x-6 justify-end items-center">
                                     <button
                                         type="button"
