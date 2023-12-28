@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet"
-import { RiStore2Line } from 'react-icons/ri'
 import { IoQrCodeOutline } from "react-icons/io5";
 import { BsChatSquareText } from "react-icons/bs";
 
