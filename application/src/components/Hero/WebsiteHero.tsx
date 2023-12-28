@@ -37,10 +37,11 @@ interface HeroSectionProps {
     title: string;
     description: string;
     icon?: React.ReactNode;
+    url?: string;
   }[]
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features,image }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, cta, features, image }) => {
   return (
     <div className="relative mx-auto max-w-7xl mt-20 sm:mt-0 sm:justify-center sm:items-center textm-center grid sm:grid-cols-9  h-screen ">
       {/* Radial Gradient Background */}
@@ -57,33 +58,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ title, description, ct
           {cta.label}
         </NavLink>
       </div>
-    <div className="col-span-3 px-4">
-      <img className="-mt-36 sm:mt-0" src={image?.src} alt={image?.alt} />
-     <div className="lg:hidden md:hidden sm:hidden">
-     <p className=" -mt-24 sm:mt-0 sm:hidden mb-8">{description}</p>
-      <NavLink
-          to={cta.url}
-          className="px-6 sm:hidden  py-3 bg-nocash-500 text-white hover:text-white rounded-full hover:bg-nocash-600 transition duration-300"
-        >
-          {cta.label}
-        </NavLink>
-     </div>
-    </div>
+      <div className="col-span-3 px-4">
+        <img className="-mt-36 sm:mt-0" src={image?.src} alt={image?.alt} />
+        <div className="lg:hidden md:hidden sm:hidden">
+          <p className=" -mt-24 sm:mt-0 sm:hidden mb-8">{description}</p>
+          <NavLink
+            to={cta.url}
+            className="px-6 sm:hidden  py-3 bg-nocash-500 text-white hover:text-white rounded-full hover:bg-nocash-600 transition duration-300"
+          >
+            {cta.label}
+          </NavLink>
+        </div>
+      </div>
       {/* Hero feature List */}
-      <div className="feature hidden sm:block col-span-2">
+      <div className="feature hidden sm:block col-span-2 z-50">
         {features?.map((feature) => (
-          <div key={feature.title} className="feature-item p-4 hidden sm:block">
-            <div className="feature-icon">{feature.icon}</div>
-            <h3 className="feature-title text-xl text-nocash-500">{feature.title}</h3>
-            <p className="feature-description line-clamp-2 sub">{feature.description}</p>
-            <div className="flex items-center py-3">
+          <NavLink to={feature.url as string} key={feature.title} className="feature-item p-4 hidden sm:block group">
+            <div className=" group-hover:border group-hover:p-2 group-hover:border-nocash-500">
+              <div className="feature-icon">{feature.icon}</div>
+              <h3 className="feature-title text-xl text-nocash-500">{feature.title}</h3>
+              <p className="feature-description line-clamp-2 sub">{feature.description}</p>
+            </div>
+            <div className="flex items-center py-3 group-hover:hidden">
               <div className="w-full h-px bg-gradient-to-r from-transparent via-nocash-500 to-transparent"></div>
             </div>
-          </div>
+          </NavLink>
 
         ))}
       </div>
-    
+
     </div>
   );
 };
