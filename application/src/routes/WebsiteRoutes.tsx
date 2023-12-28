@@ -5,13 +5,10 @@ import { GeneralRoutes } from "./GeneralRoutes";
 export const WebsiteRoutes = createBrowserRouter(
     createRoutesFromElements(
         <Route>
-            <Route element={<WebsitePagelayout />}> 
+            <Route element={<WebsitePagelayout />}>
                 <Route index path="/" element={<WebsiteHomePage />} />
-                
-            </Route>
-            <Route>
                 <Route path="/t" >
-                    <Route index  path="/t" element={<ToolsPage />} />
+                    <Route index path="/t" element={<ToolsPage />} />
                     <Route path="/t/:option" element={<ToolsPage />} />
                 </Route>
             </Route>
@@ -19,7 +16,7 @@ export const WebsiteRoutes = createBrowserRouter(
                 <Route index path="/auth" element={<AuthPage />} />
                 <Route path="/auth/:option" element={<AuthPage />} />
             </Route>
-            
+
             {GeneralRoutes}
         </Route>
     )
