@@ -13,14 +13,17 @@ export const HERO_DATA = {
     features: [
       {
         title: 'Airtime-Powered',
-        description:`Use your airtime to fufill your daily payment needs.`
+        description:`Use your airtime to fulfill your daily payment needs.`,
+        url: '/t/airtime-payments'
       },
       {
-        title: 'Smart Savings & Rewards:',
+        title: 'Aggregated Rewards',
+        url: '/t/aggregated-rewards',
         description: `noo.cash goes beyond ordinary transactions – it's about earning as you spend. Our smart savings feature lets users receive small amounts of money with each transaction. Think of it as a rewards system or a gamified feature that encourages you to save while you spend. Experience the joy of watching your savings grow effortlessly with every purchase. Noo.Cash not only transforms payments but also turns spending into a rewarding experience.`
       },
       {
-        title: 'AI Powered Payments:',
+        title: 'Smart Shopping Tools',
+        url: '/t/smart-shopping-tools',
         description: `Discover a revolutionary way to make payments with noo.cash. Enjoy the future of payments with instant and secure cashless transactions, whether you're shopping in-store or online. Experience unparalleled convenience and speed, eliminating the need for physical cash. Noo.Cash transforms the way you pay, making every transaction a seamless and futuristic experience.`
       }
     ]
