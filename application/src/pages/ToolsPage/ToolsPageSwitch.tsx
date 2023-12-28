@@ -1,9 +1,9 @@
-import { AirtimePoweredPage } from "."
+import { AggregatedRewardsPage, AirtimePoweredPage } from "."
 
 export const ToolsPageSwitch = () => {
     return {
         'airtime-payments': <AirtimePoweredPage/>,
-        //TODO: '/aggregated-rewards': AggregateRewardsPage,
+        'aggregated-rewards': <AggregatedRewardsPage/>,
         // TODO:'/smart-shopping-tools': SmartShoppingToolsPage
     }
   
