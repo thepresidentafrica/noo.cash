@@ -11,7 +11,8 @@
     "ui": "pnpm --filter president",
     "op": "pnpm --filter opo2nity",
     "device": "pnpm --filter noo.device",
-    "so": "pnpm --filter sombatout"
+    "so": "pnpm --filter sombatout",
+    "change": "pnpm changeset"
   },
   "keywords": [
     "sombatout",
