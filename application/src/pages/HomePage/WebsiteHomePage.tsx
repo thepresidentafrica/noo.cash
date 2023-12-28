@@ -11,7 +11,6 @@ export const WebsiteHomePage = () => {
     return (
         <div key={loc.key}>
       
-        {/* TODO:  subtracted Add prpper footer  additions*/}
         <section ref={sectionRef} id="home" className="features bg-nocash-20 min-h-screen">
         <HeroSection {...HERO_DATA}/>
       
@@ -21,6 +20,8 @@ export const WebsiteHomePage = () => {
         </section>
         <section id="features" className="features min-h-screen">
             {/* <p>Features Section</p> */}
+            <ContainerHolder name={"features"}></ContainerHolder>
+
         </section>
         <section className="max-w-7xl px-4 mx-auto">
             <ContainerHolder name={"accessories"}>
