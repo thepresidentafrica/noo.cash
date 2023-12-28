@@ -1,4 +1,8 @@
+import { useState } from "react"
+import { RegisterRewards } from "./RegisterRewards"
+
 export const AggregatedRewardsPage = () => {
+    const [reg, setRegisterRewards] = useState<{ open: boolean, type: any } | null>(null)
     return (<div className="py-8 my-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
         <div className="grid sm:grid-cols-2 gap-8">
@@ -12,7 +16,7 @@ export const AggregatedRewardsPage = () => {
                     We've developed a platform to help you manage all your gift and reward cards in one place. Managing your gift and reward cards has never been easier                </p>
                 <div className="grid grid-cols-4 gap-4">
                     {
-                        [ 'pep.svg','ackermans.png', 'shoprite.png', 'checkers.png', 'takealot.png', 'amazon.png','mrp.png','woolworth.png'].map((item, index) => <img key={index} src={`/patners/${item}`} alt={item} />)
+                        ['pep.svg', 'ackermans.png', 'shoprite.png', 'checkers.png', 'takealot.png', 'amazon.png', 'mrp.png', 'woolworth.png'].map((item, index) => <img key={index} src={`/patners/${item}`} alt={item} />)
                     }
                 </div>
             </div>
@@ -34,13 +38,13 @@ export const AggregatedRewardsPage = () => {
 
                         </div>
                         <div className="flex items-center">
-                            <button
-                                type="submit"
+                            <button onClick={() => setRegisterRewards({ open: true, type: 'pro' })}
+                                type="button"
                                 className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-nocash-400 hover:bg-nocash-700 focus:shadow-outline focus:outline-none"
                             >
                                 Get started
                             </button>
-                           
+
                         </div>
                     </div>
                     <div className="flex flex-col justify-between p-5 sm:p-10 lg:w-1/2">
@@ -60,6 +64,11 @@ export const AggregatedRewardsPage = () => {
                 </div>
             </div>
         </div>
+        {
+            reg?.open && <>
+                <RegisterRewards open={reg.open} type={reg.type} setOpen={setRegisterRewards} />
+            </>
+        }
     </div>)
 
 }
