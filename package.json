@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "app": "pnpm --filter application",
+    "app": "pnpm --filter no-cash",
     "api": "pnpm --filter api",
     "enginear": "pnpm --filter enginear",
     "pres": "pnpm --filter president",
