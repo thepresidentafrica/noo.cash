@@ -12,7 +12,7 @@ export const HERO_DATA = {
     },
     features: [
       {
-        title: 'Airtime-Powered',
+        title: 'USSD Payment Mechanism',
         description:`Use your airtime to fulfill your daily payment needs.`,
         url: '/t/airtime-payments'
       },
