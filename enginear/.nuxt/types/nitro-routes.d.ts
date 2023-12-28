@@ -4,11 +4,11 @@ declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
     '/__nuxt_error': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../../node_modules/.pnpm/nuxt@3.8.2_vite@4.5.0/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../../node_modules/.pnpm/nuxt@3.9.0_vite@4.5.1/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>
     }
     '/api/_auth/session': {
-      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-auth-utils/dist/runtime/server/api/session.delete').default>>>>
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-auth-utils/dist/runtime/server/api/session.get').default>>>>
+      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../../node_modules/.pnpm/nuxt-auth-utils@0.0.10/node_modules/nuxt-auth-utils/dist/runtime/server/api/session.delete').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../../node_modules/.pnpm/nuxt-auth-utils@0.0.10/node_modules/nuxt-auth-utils/dist/runtime/server/api/session.get').default>>>>
     }
   }
 }

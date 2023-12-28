@@ -50,17 +50,20 @@
       "public": [
         "../public"
       ],
+      "public/*": [
+        "../public/*"
+      ],
       "#app": [
-        "../../node_modules/.pnpm/nuxt@3.8.2_vite@4.5.0/node_modules/nuxt/dist/app"
+        "../../node_modules/.pnpm/nuxt@3.9.0_vite@4.5.1/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "../../node_modules/.pnpm/nuxt@3.8.2_vite@4.5.0/node_modules/nuxt/dist/app/*"
+        "../../node_modules/.pnpm/nuxt@3.9.0_vite@4.5.1/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "../../node_modules/.pnpm/nuxt@3.8.2_vite@4.5.0/node_modules/nuxt/dist/app/compat/vue-demi"
+        "../../node_modules/.pnpm/nuxt@3.9.0_vite@4.5.1/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#auth-utils": [
-        "../node_modules/nuxt-auth-utils/dist/runtime/types/index"
+        "../../node_modules/.pnpm/nuxt-auth-utils@0.0.10/node_modules/nuxt-auth-utils/dist/runtime/types/index"
       ],
       "#vue-router": [
         "./vue-router-stub"
@@ -82,24 +85,25 @@
   "include": [
     "./nuxt.d.ts",
     "../**/*",
-    "../node_modules/@nuxtjs/tailwindcss/runtime",
-    "../node_modules/nuxt-auth-utils/runtime",
-    "../node_modules/@unlighthouse/nuxt/runtime",
-    "../node_modules/@nuxt/devtools/runtime",
-    "../node_modules/@nuxt/telemetry/runtime",
+    "../../node_modules/.pnpm/@nuxtjs+tailwindcss@6.10.3/node_modules/@nuxtjs/tailwindcss/runtime",
+    "../../node_modules/.pnpm/nuxt-auth-utils@0.0.10/node_modules/nuxt-auth-utils/runtime",
+    "../../node_modules/.pnpm/@unlighthouse+nuxt@0.10.4_puppeteer@21.6.1_webpack@5.89.0/node_modules/@unlighthouse/nuxt/runtime",
+    "../../node_modules/.pnpm/@nuxt+devtools@1.0.6_nuxt@3.9.0_vite@4.5.1/node_modules/@nuxt/devtools/runtime",
+    "../@nuxt/telemetry/runtime",
     "..",
-    "../../node_modules/.pnpm/nuxt@3.8.2_vite@4.5.0/node_modules/nuxt/dist/app",
-    "../../node_modules/.pnpm/nuxt@3.8.2_vite@4.5.0/node_modules/nuxt/dist/app/compat/vue-demi"
+    "../../node_modules/.pnpm/nuxt@3.9.0_vite@4.5.1/node_modules/nuxt/dist/app",
+    "../../node_modules/.pnpm/nuxt@3.9.0_vite@4.5.1/node_modules/nuxt/dist/app/compat/vue-demi",
+    "../../node_modules/.pnpm/nuxt-auth-utils@0.0.10/node_modules/nuxt-auth-utils/dist/runtime/types/index"
   ],
   "exclude": [
     "../node_modules",
     "../../node_modules",
-    "../../node_modules/.pnpm/nuxt@3.8.2_vite@4.5.0/node_modules/nuxt/node_modules",
-    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
-    "../node_modules/nuxt-auth-utils/runtime/server",
-    "../node_modules/@unlighthouse/nuxt/runtime/server",
-    "../node_modules/@nuxt/devtools/runtime/server",
-    "../node_modules/@nuxt/telemetry/runtime/server",
+    "../../node_modules/.pnpm/nuxt@3.9.0_vite@4.5.1/node_modules/nuxt/node_modules",
+    "../../node_modules/.pnpm/@nuxtjs+tailwindcss@6.10.3/node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../../node_modules/.pnpm/nuxt-auth-utils@0.0.10/node_modules/nuxt-auth-utils/runtime/server",
+    "../../node_modules/.pnpm/@unlighthouse+nuxt@0.10.4_puppeteer@21.6.1_webpack@5.89.0/node_modules/@unlighthouse/nuxt/runtime/server",
+    "../../node_modules/.pnpm/@nuxt+devtools@1.0.6_nuxt@3.9.0_vite@4.5.1/node_modules/@nuxt/devtools/runtime/server",
+    "../@nuxt/telemetry/runtime/server",
     "../dist",
     "../.output"
   ]
