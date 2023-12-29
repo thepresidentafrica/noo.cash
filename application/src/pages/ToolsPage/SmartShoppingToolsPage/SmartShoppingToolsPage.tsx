@@ -1,9 +1,25 @@
-import { useParams } from "react-router-dom"
+import { NavLink, useParams } from "react-router-dom"
 import { TOOLS_DATA } from "./ToolsData"
-import { PartnersComponent } from "../../../components"
+import { JOIN_WAITING_LIST, PartnersComponent } from "../../../components"
+import { EnvelopeIcon } from "@heroicons/react/24/outline"
+import { useForm } from "react-hook-form"
+import { useMutation } from "@apollo/client"
 
 export const SmartShoppingToolsPage = () => {
-    const { suboption } = useParams()
+    const { suboption } = useParams();
+    const [wList] = useMutation(JOIN_WAITING_LIST);
+    const {register, getValues,reset} = useForm({mode:"onChange"});
+    const handleWaitList = async (e: any) => {
+        e.preventDefault();
+      try {
+         const wl = await wList({variables:getValues()})
+          console.log(wl)
+          reset()
+      } catch (error) {
+        console.log(getValues())
+        console.log(error)
+      }
+    }
     return (<>
         <div className="div py-4 my-4 mx-auto sm:max-w-7xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12">
 
@@ -21,41 +37,66 @@ export const SmartShoppingToolsPage = () => {
                                     </span>
                                 </h2>
                                 <p className="text-base text-gray-700 md:text-lg">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                                    quae. explicabo.
+                                    We know that shopping is an important part of life. as such our tools help you shop smarter, better and faster. we are currently in the process of developing these tools.
                                 </p>
                             </div>
                             <hr className="mb-6 border-gray-300" />
-                            <div className="flex">
-                                <a href="/" aria-label="Play Song" className="mr-3">
-                                    <div className="flex items-center justify-center w-10 h-10 text-white transition duration-300 transform rounded-full shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 hover:scale-110">
-                                        <svg className="w-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <div className="flex flex-col">
-                                    <div className="text-sm font-semibold">
-                                        Rich the kid &amp; Famous Dex
-                                    </div>
-                                    <div className="text-xs text-gray-700">Rich Forever Intro</div>
-                                </div>
+                            <div className="flex justify-between items-center">
+                                {
+                                    ['vasha.webp', 'pago.webp', 'virtrofi.webp', 'eit.webp'].map((item, index) => <NavLink key={index} to={`/t/smart-shopping-tools/${item.split('.')[0]}`} className="flex flex-col items-center "><img key={index} src={`/tools/${item}`} alt={item} title={item.split('.')[0]} className="w-12 h-12 rounded-full" />
+                                        <p>{item.split('.')[0]}</p>
+                                    </NavLink>)
+                                }
                             </div>
                         </div>
                         <div className="px-5 pt-6 pb-5 text-center border border-gray-300 rounded lg:w-2/5">
                             <div className="mb-5 font-semibold">Join the waiting list</div>
-                           
+
                             <p className="max-w-md px-5 mb-3 text-xs text-gray-600 sm:text-sm md:mb-5">
                                 We are actively working on these features. please join our waiting list to be notified when they are ready.
                             </p>
-                           
-                            <a
-                                href="/"
-                                className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold transition duration-200 bg-white border border-gray-300 rounded md:w-auto hover:bg-gray-100 focus:shadow-outline focus:outline-none"
-                            >
-                                Sign Up with Email
-                            </a>
+                            <form onSubmit={handleWaitList} className="text-left p-4">
+                                <p className="text-sm font-medium">Select product(s)</p>
+                                <fieldset className="mt-4 space-y-4">
+                                    <div className="space-y-4 sm:flex sm:items-center sm:space-x-10 sm:space-y-0">
+                                        {[{ id: 'vasha', title: 'Vasha' }, { id: 'pago', title: 'Pago' }, { id: 'virtrofi', title: 'Virtrofi' }, { id: 'eit', title: 'EIT' }].map((notificationMethod) => (
+                                            <div key={notificationMethod.id} className="flex items-center">
+                                                <input {...register('products')}
+                                                    id={notificationMethod.id}
+                                                    name="products" value={notificationMethod.id}
+                                                    type="checkbox" multiple
+                                                    className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                                                />
+                                                <label htmlFor={notificationMethod.id} className="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                                                    {notificationMethod.title}
+                                                </label>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                                            Email
+                                        </label>
+                                        <div className="relative mt-2 rounded-md shadow-sm">
+                                            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                                <EnvelopeIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                                            </div>
+                                            <input
+                                            {...register('email')}
+                                                type="email"
+                                                name="email"
+                                                id="email" 
+                                                className="block w-full rounded-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                placeholder="you@example.com"
+                                            />
+                                        </div>
+                                    </div>
+                                    <button className="w-full mt-4 px-3 py-2 text-sm font-semibold text-white rounded-md shadow-sm bg-nocash hover:bg-nocash-dark">Join waiting list</button>
+                                </fieldset>
+                                
+                            </form>
+
+
                         </div>
                     </div>
                 </div>
@@ -90,7 +131,6 @@ export const SmartShoppingToolsPage = () => {
                     </div>
                 </div>
                 }
-
             </div>
 
         </div>
