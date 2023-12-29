@@ -7,6 +7,7 @@
     "no": "pnpm --filter no-cash",
     "api": "pnpm --filter api",
     "enginear": "pnpm --filter enginear",
+    "va": "pnpm --filter vasha",
     "pres": "pnpm --filter president",
     "ui": "pnpm --filter president",
     "op": "pnpm --filter opo2nity",
