@@ -10,6 +10,7 @@ export const WebsiteRoutes = createBrowserRouter(
                 <Route path="/t" >
                     <Route index path="/t" element={<ToolsPage />} />
                     <Route path="/t/:option" element={<ToolsPage />} />
+                    <Route path="/t/:option/:suboption" element={<ToolsPage />} />
                 </Route>
             </Route>
             <Route path="/auth">

@@ -1,5 +1,11 @@
 # enginear
 
+## 0.0.14
+
+### Patch Changes
+
+- 9c284d8: update configs and scripts
+
 ## 0.0.13
 
 ### Patch Changes
