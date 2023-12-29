@@ -6,3 +6,4 @@ export * from './NavigationComponnets';
 export * from './PartnersComponent';
 export * from './Placeholder';
 export * from './SEO';
+export * from './WaitingList';
