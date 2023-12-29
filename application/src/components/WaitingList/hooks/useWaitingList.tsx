@@ -13,9 +13,7 @@ export const useWaitingList = (waitListData?: IWaitingList) => {
                 const { data: result, errors } = await joinWaitingList({
                     variables: {
                         email: waitListData?.email,
-                        fullName: waitListData?.fullName,
-                        product: waitListData?.product,
-                        company: waitListData?.company
+                        products: waitListData?.products,
                     }
                 })
                 if (result) {
@@ -23,13 +21,14 @@ export const useWaitingList = (waitListData?: IWaitingList) => {
                 }
             } else {
                 const { data: result,error } = await getWaitingList();
+                console.log({result,error})
                 if (result) {
                     setData({ list: result.noocash_WailtingList, error })
                 }
             }
         }
-        waitList().then()
-    })
+        waitList().then(data=>data).then(data=>data)
+    },[])
     return data
 }
 
