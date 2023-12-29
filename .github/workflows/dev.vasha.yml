@@ -1,0 +1,56 @@
+name: Vasha Staging Environment
+on:
+  pull_request:
+    types: [closed]
+    paths:
+        "subapps/vasha/**"
+  workflow_dispatch:
+env:
+    VITE_APP_MODE: website
+    VITE_APP_TITLE: noo.cash
+jobs:
+  build-noocash-dev:
+    defaults:
+      run:
+        working-directory: subapps/vasha
+    if: github.event.pull_request.merged==true
+    name: build-noocash-dev
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GIT_TOKEN }}
+    - name: Build and Push Docker Image
+      run: |
+        echo "
+        HASURA_GRAPHQL_ENDPOINT=${{secrets.VITE_NOOCASH_HASURA_API_URL}}
+        HASURA_GRAPHQL_ADMIN_SECRET=${{secrets.VITE_NOCASH_APP_MODE}}
+        ">.env
+    - name: Build and Push Docker Image
+      run: |
+        docker build -t ghcr.io/${{ github.repository_owner }}/noocash:vasha-dev .
+        docker push ghcr.io/${{ github.repository_owner }}/noocash:vasha-dev
+     
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-noocash-dev
+    name: deploy-noocash-dev
+    steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Login to azure
+            uses: azure/login@v1
+            with:
+              creds: ${{ secrets.VASHA_DEV_AZURE_CREDENTIALS }}
+          - name: Deploy to Azure Web App
+            uses: azure/webapps-deploy@v2
+            with:
+              app-name: ${{secrets.VASHA_DEV_APP_NAME}}
+              images: 'ghcr.io/${{ github.repository_owner }}/noocash:vasha-dev'
+      
