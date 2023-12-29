@@ -1,11 +1,12 @@
 import { gql } from "@apollo/client";
 
 export const JOIN_WAITING_LIST = gql`
-mutation joinWaitingList($product: String = "", $email: String = "", $fullName: String = "") {
-  insert_noocash_WailtingList_one(object: {email: $email, fullName: $fullName, product: $product}) {
+mutation MyMutation($email: String = "", $products: [String!] = "") {
+  addOneWaitingList(object: {email: $email, products: $products}) {
+    created_at
     email
-    fullName
-    product
+    id
+    products
     updated_at
   }
 }
