@@ -1,11 +1,12 @@
-import { FC } from "react"
-import { IWaitingList } from "./IWaitingList"
+import { useQuery } from "@apollo/client";
+import { GET_WAITING_LIST } from ".";
 
-export const WaitingList:FC<IWaitingList> = ({product,email,fullName,option}) => {
+export const WaitingList = () => {
+    const {data, loading,error}= useQuery(GET_WAITING_LIST);
     return (<>
         <pre>
             {
-                JSON.stringify({product,email,fullName,option},null,2)
+               !loading && JSON.stringify({data,loading,error},null,2)
             }
         </pre>
     </>)
