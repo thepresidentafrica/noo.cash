@@ -22,12 +22,12 @@ export const Noocash = () => {
           {/* Set the meta tags for SEO and social sharing */}
           <Helmet>
             {/* Standard meta tags for SEO */}
-            <title className="capitalize">{env.VITE_APP_TITLE} | Your trusted online payment platform for secure and hassle-free digital transactions</title>
+            <title className="capitalize">{env.VITE_NOCASH_APP_TITLE} | Your trusted online payment platform for secure and hassle-free digital transactions</title>
             
 
           </Helmet>
         </div>
-        <RouterProvider router={appRoutes[env.VITE_APP_MODE||"website"]} />
+        <RouterProvider router={appRoutes[env.VITE_NOCASH_APP_MODE||"website"]} />
       </ApolloProvider>
     </>
   )
