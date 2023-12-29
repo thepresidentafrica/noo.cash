@@ -1,5 +1,5 @@
 export declare interface IWaitingList {
-    product?: string;
+    products?: string[];
     fullName?: string;
     email?: string
     company?: string
