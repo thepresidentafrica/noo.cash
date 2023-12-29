@@ -1,4 +1,4 @@
-import { NavLink, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { TOOLS_DATA } from "./ToolsData"
 import { PartnersComponent } from "../../../components"
 
