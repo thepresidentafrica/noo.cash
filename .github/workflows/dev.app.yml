@@ -36,6 +36,9 @@ jobs:
         VITE_FIREBASE_messagingSenderId=${{secrets.VITE_FIREBASE_messagingSenderId}}
         VITE_FIREBASE_appId=${{secrets.VITE_FIREBASE_appId}}
         VITE_FIREBASE_measurementId=${{secrets.VITE_FIREBASE_measurementId}}
+        VITE_NOOCASH_HASURA_API_URL=${{secrets.VITE_NOOCASH_HASURA_API_URL}}
+        VITE_NOCASH_APP_MODE=${{secrets.VITE_NOCASH_APP_MODE}}
+        VITE_NOCASH_APP_TITLE=${{secrets.VITE_NOCASH_APP_TITLE}}   
         ">.env
     - name: Build and Push Docker Image
       run: |
