@@ -3,10 +3,12 @@ from datetime import date
 
 legal = Blueprint("legal", __name__)
 
+
 @legal.route("/legal")
 def index():
     data = {"title": "noo.cash | Legal", "year": date.today().year}
     return render_template("legal.html", data=data)
+
 
 @legal.route("/legal/<option>")
 def option(option):
@@ -22,5 +24,5 @@ def option(option):
     Raises:
         None
     """
-    data = {"title": "noo.cash | Legal", "option":option, "year": date.today().year}
+    data = {"title": "noo.cash | Legal", "option": option, "year": date.today().year}
     return render_template("legal.html", data=data)
