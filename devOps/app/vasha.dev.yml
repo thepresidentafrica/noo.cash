@@ -1,8 +1,8 @@
 version: '3'
-name: "noocash-dev"
+name: "apps-dev"
 services:
   app:
-    image: ghcr.io/thepresidentafrica/noocash:vasha-dev
+    image: ghcr.io/thepresidentafrica/noocash:apps-dev
     ports:
       - 80:80
     restart: always
