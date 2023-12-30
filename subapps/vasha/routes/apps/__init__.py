@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template
 from datetime import date
 
 apps = Blueprint("apps", __name__)
@@ -7,7 +7,7 @@ apps = Blueprint("apps", __name__)
 @apps.route("/apps/<app_name>")
 def index(app_name):
     data = {
-        "title": "noo.cash | apps platform",
+        "title": "apps platform",
         "app_name": app_name,
         "year": date.today().year,
     }

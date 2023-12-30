@@ -19,10 +19,15 @@ def option(option):
         option (str): The option chosen for the legal request.
 
     Returns:
-        flask.Response: The rendered legal.html template with the provided data.
+        flask.Response:
+        The rendered legal.html template with the provided data.
 
     Raises:
         None
     """
-    data = {"title": "noo.cash | Legal", "option": option, "year": date.today().year}
+    data = {
+        "title": f"legal - {option}",
+        "option": option,
+        "year": date.today().year,
+    }
     return render_template("legal.html", data=data)
