@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         working-directory: subapps/vasha
-    if: github.event.pull_request.merged==true
+    # if: github.event.pull_request.merged==true
     name: build-noocash-dev
     runs-on: ubuntu-latest
     steps:
