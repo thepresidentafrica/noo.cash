@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gunicorn app:app",
     "src": "source env/bin/activate",
     "freez": "pip freeze > requirements.txt",
     "docker:build": "docker build -t noocash:vasha . ",
