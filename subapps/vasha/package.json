@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gunicorn app:app",
+    "dev": "gunicorn --reload app:app",
     "src": "source env/bin/activate",
     "freez": "pip freeze > requirements.txt",
     "docker:build": "docker build -t noocash:vasha . ",
