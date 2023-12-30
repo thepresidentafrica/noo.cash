@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "no": "pnpm --filter no-cash",
+    "no": "pnpm --filter noocash",
     "api": "pnpm --filter api",
     "enginear": "pnpm --filter enginear",
     "va": "pnpm --filter vasha",
