@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
-from datetime import  date
+from datetime import date
+
 admin = Blueprint("admin", __name__)
 
 
