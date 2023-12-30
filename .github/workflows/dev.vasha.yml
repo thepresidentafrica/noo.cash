@@ -1,5 +1,8 @@
 name: Vasha Staging Environment
 on:
+  push:
+    paths:
+        "subapps/vasha/**"
   pull_request:
     types: [closed]
     paths:
