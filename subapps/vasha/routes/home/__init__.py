@@ -3,7 +3,7 @@ from datetime import date
 
 home = Blueprint('home', __name__)
 
-@home.route('/')
+@home.route('/j')
 def index():
     data = {'title': "noo.cash | apps platform", 'year': date.today().year }
     return render_template('index.html', data=data)
