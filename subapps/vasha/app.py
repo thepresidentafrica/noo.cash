@@ -1,5 +1,4 @@
 # create a flask application with html ui
-import os
 from flask import Flask
 from dotenv import load_dotenv
 from routes.home import home
