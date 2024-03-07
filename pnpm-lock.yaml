@@ -12,95 +12,7 @@ importers:
         specifier: ^2.27.1
         version: 2.27.1
 
-  backend:
-    dependencies:
-      '@apollo/server':
-        specifier: ^4.9.5
-        version: 4.9.5(graphql@16.8.1)
-      '@graphql-tools/graphql-file-loader':
-        specifier: ^8.0.0
-        version: 8.0.0(graphql@16.8.1)
-      '@graphql-tools/load':
-        specifier: ^8.0.0
-        version: 8.0.1(graphql@16.8.1)
-      '@graphql-tools/schema':
-        specifier: ^10.0.0
-        version: 10.0.2(graphql@16.8.1)
-      '@prisma/client':
-        specifier: ^5.6.0
-        version: 5.7.1(prisma@5.7.1)
-      cors:
-        specifier: ^2.8.5
-        version: 2.8.5
-      dotenv:
-        specifier: ^16.3.1
-        version: 16.3.1
-      express:
-        specifier: ^4.18.2
-        version: 4.18.2
-      graphql:
-        specifier: ^16.8.1
-        version: 16.8.1
-      module-alias:
-        specifier: ^2.2.3
-        version: 2.2.3
-    devDependencies:
-      '@types/cors':
-        specifier: ^2.8.16
-        version: 2.8.17
-      '@types/express':
-        specifier: ^4.17.21
-        version: 4.17.21
-      '@types/node':
-        specifier: ^20.9.0
-        version: 20.10.5
-      nodemon:
-        specifier: ^3.0.1
-        version: 3.0.2
-      prisma:
-        specifier: ^5.6.0
-        version: 5.7.1
-      ts-node:
-        specifier: ^10.9.1
-        version: 10.9.2(@types/node@20.10.5)(typescript@5.3.3)
-      tslib:
-        specifier: ^2.6.2
-        version: 2.6.2
-      typescript:
-        specifier: ^5.2.2
-        version: 5.3.3
-
-  enginear:
-    devDependencies:
-      '@nuxt/devtools':
-        specifier: latest
-        version: 1.0.6(nuxt@3.9.0)(vite@4.5.1)
-      '@nuxtjs/tailwindcss':
-        specifier: ^6.10.1
-        version: 6.10.3
-      '@unlighthouse/nuxt':
-        specifier: ^0.10.4
-        version: 0.10.4(puppeteer@21.6.1)(webpack@5.89.0)
-      nuxt:
-        specifier: ^3.8.2
-        version: 3.9.0(vite@4.5.1)
-      nuxt-auth-utils:
-        specifier: ^0.0.10
-        version: 0.0.10
-      vue:
-        specifier: ^3.3.10
-        version: 3.3.13
-      vue-router:
-        specifier: ^4.2.5
-        version: 4.2.5(vue@3.3.13)
-
-  noo.device:
-    devDependencies:
-      '@devicescript/cli':
-        specifier: latest
-        version: 2.15.23
-
-  noocash:
+  application:
     dependencies:
       '@apollo/client':
         specifier: ^3.8.7
@@ -208,6 +120,94 @@ importers:
       vite:
         specifier: ^4.5.1
         version: 4.5.1(@types/node@20.5.1)(sass@1.69.5)
+
+  backend:
+    dependencies:
+      '@apollo/server':
+        specifier: ^4.9.5
+        version: 4.9.5(graphql@16.8.1)
+      '@graphql-tools/graphql-file-loader':
+        specifier: ^8.0.0
+        version: 8.0.0(graphql@16.8.1)
+      '@graphql-tools/load':
+        specifier: ^8.0.0
+        version: 8.0.1(graphql@16.8.1)
+      '@graphql-tools/schema':
+        specifier: ^10.0.0
+        version: 10.0.2(graphql@16.8.1)
+      '@prisma/client':
+        specifier: ^5.6.0
+        version: 5.7.1(prisma@5.7.1)
+      cors:
+        specifier: ^2.8.5
+        version: 2.8.5
+      dotenv:
+        specifier: ^16.3.1
+        version: 16.3.1
+      express:
+        specifier: ^4.18.2
+        version: 4.18.2
+      graphql:
+        specifier: ^16.8.1
+        version: 16.8.1
+      module-alias:
+        specifier: ^2.2.3
+        version: 2.2.3
+    devDependencies:
+      '@types/cors':
+        specifier: ^2.8.16
+        version: 2.8.17
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.21
+      '@types/node':
+        specifier: ^20.9.0
+        version: 20.10.5
+      nodemon:
+        specifier: ^3.0.1
+        version: 3.0.2
+      prisma:
+        specifier: ^5.6.0
+        version: 5.7.1
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.10.5)(typescript@5.3.3)
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.3
+
+  enginear:
+    devDependencies:
+      '@nuxt/devtools':
+        specifier: latest
+        version: 1.0.6(nuxt@3.9.0)(vite@4.5.1)
+      '@nuxtjs/tailwindcss':
+        specifier: ^6.10.1
+        version: 6.10.3
+      '@unlighthouse/nuxt':
+        specifier: ^0.10.4
+        version: 0.10.4(puppeteer@21.6.1)(webpack@5.89.0)
+      nuxt:
+        specifier: ^3.8.2
+        version: 3.9.0(vite@4.5.1)
+      nuxt-auth-utils:
+        specifier: ^0.0.10
+        version: 0.0.10
+      vue:
+        specifier: ^3.3.10
+        version: 3.3.13
+      vue-router:
+        specifier: ^4.2.5
+        version: 4.2.5(vue@3.3.13)
+
+  noo.device:
+    devDependencies:
+      '@devicescript/cli':
+        specifier: latest
+        version: 2.15.23
 
   opo2nity:
     dependencies:
@@ -13422,8 +13422,8 @@ packages:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
 
-  /jose@4.15.4:
-    resolution: {integrity: sha512-W+oqK4H+r5sITxfxpSU+MMdr/YSWGvgZMQDIsNoBDGGy4i7GBPTtvFKibQzW06n3U3TqHjhvBJsirShsEJ6eeQ==}
+  /jose@4.15.5:
+    resolution: {integrity: sha512-jc7BFxgKPKi94uOvEmzlSWFFe2+vASyXaKUpdQKatWAESU2MWjDfFf0fdfc83CDKcA5QecabZeNLyfhe3yKNkg==}
     dev: true
 
   /jpeg-js@0.4.4:
@@ -14958,7 +14958,7 @@ packages:
       '@babel/runtime': 7.23.6
       '@panva/hkdf': 1.1.1
       cookie: 0.5.0
-      jose: 4.15.4
+      jose: 4.15.5
       next: 14.0.4(@babel/core@7.23.6)(react-dom@18.2.0)(react@18.2.0)
       oauth: 0.9.15
       openid-client: 5.6.2
@@ -15747,7 +15747,7 @@ packages:
   /openid-client@5.6.2:
     resolution: {integrity: sha512-TIVimoK/fAvpiISLcoGZyNJx2TOfd5AE6TXn58FFj6Y8qbU/jqky54Aws7sYKuCph1bLPWSRUa1r/Rd6K21bhg==}
     dependencies:
-      jose: 4.15.4
+      jose: 4.15.5
       lru-cache: 6.0.0
       object-hash: 2.2.0
       oidc-token-hash: 5.0.3
