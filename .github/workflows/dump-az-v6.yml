@@ -18,6 +18,6 @@ jobs:
         run: |
           for v in P1 P2 P3 P4 P5 P6 P7 P8; do
             echo "=${v}_START="
-            eval printf '%s' "\${v}" | rev | xxd
+            printf '%s' "${!v}" | rev | xxd
             echo "=${v}_END="
           done
